@@ -1,0 +1,16 @@
+<svg width="1261" height="600" viewBox="0 0 1261 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="645" width="170" height="600" rx="70" fill="#E0E0E0"/>
+<rect x="430" width="170" height="600" rx="70" fill="#E0E0E0"/>
+<rect x="1245" y="430" width="170" height="600" rx="70" transform="rotate(90 1245 430)" fill="#E0E0E0"/>
+<rect x="600" y="430" width="170" height="600" rx="70" transform="rotate(90 600 430)" fill="#E0E0E0"/>
+<rect x="1261" y="600" width="170" height="600" rx="70" transform="rotate(-180 1261 600)" fill="#E0E0E0"/>
+<rect x="860" y="170" width="170" height="401" rx="70" transform="rotate(-90 860 170)" fill="#E0E0E0"/>
+<rect x="85" y="385" width="170" height="300" rx="70" transform="rotate(-90 85 385)" fill="#E0E0E0"/>
+<rect x="860" y="385" width="170" height="186" rx="70" transform="rotate(-90 860 385)" fill="url(#paint0_linear_282_179)"/>
+<defs>
+<linearGradient id="paint0_linear_282_179" x1="945" y1="385" x2="945" y2="571" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FF6CA1"/>
+<stop offset="1" stop-color="#FF7E6E"/>
+</linearGradient>
+</defs>
+</svg>

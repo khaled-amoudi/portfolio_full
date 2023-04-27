@@ -21,6 +21,4 @@
 
 
     @include('frontend.partials.contact_page')
-
-
 @endsection

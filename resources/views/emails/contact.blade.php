@@ -1,248 +1,218 @@
-<!DOCTYPE html>
-
-<html lang="en" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <title></title>
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <!--[if mso]><xml><o:OfficeDocumentSettings><o:PixelsPerInch>96</o:PixelsPerInch><o:AllowPNG/></o:OfficeDocumentSettings></xml><![endif]-->
+    <!--[if gte mso 9]>
+ <xml>
+  <o:OfficeDocumentSettings>
+  <o:AllowPNG/>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+ </xml>
+ <![endif]-->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="date=no" />
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="x-apple-disable-message-reformatting" />
     <!--[if !mso]><!-->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400,500,700" rel="stylesheet" />
     <!--<![endif]-->
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    <title>Email Template</title>
+    <!--[if gte mso 9]>
+ <style type="text/css" media="all">
+  sup { font-size: 100% !important; }
+ </style>
+ <![endif]-->
 
+
+    <style type="text/css" media="screen">
+        /* Linked Styles */
         body {
-            margin: 0;
-            padding: 0;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: block !important;
+            min-width: 100% !important;
+            width: 100% !important;
+            background: #f4f4f4;
+            -webkit-text-size-adjust: none
         }
 
-        a[x-apple-data-detectors] {
-            color: inherit !important;
-            text-decoration: inherit !important;
-        }
-
-        #MessageViewBody a {
-            color: inherit;
-            text-decoration: none;
+        a {
+            color: #2f774a;
+            text-decoration: none
         }
 
         p {
-            line-height: inherit
+            padding: 0 !important;
+            margin: 0 !important
         }
 
-        .desktop_hide,
-        .desktop_hide table {
-            mso-hide: all;
-            display: none;
-            max-height: 0px;
-            overflow: hidden;
+        img {
+            -ms-interpolation-mode: bicubic;
+            /* Allow smoother rendering of resized image in Internet Explorer */
         }
 
-        .image_block img+div {
-            display: none;
+        .mcnPreviewText {
+            display: none !important;
         }
 
-        @media (max-width:670px) {
 
-            .desktop_hide table.icons-inner,
-            .social_block.desktop_hide .social-table {
-                display: inline-block !important;
-            }
-
-            .icons-inner {
-                text-align: center;
-            }
-
-            .icons-inner td {
-                margin: 0 auto;
-            }
-
-            .image_block img.big,
-            .row-content {
+        /* Mobile styles */
+        @media only screen and (max-device-width: 480px),
+        only screen and (max-width: 480px) {
+            u+.body .gwfw {
                 width: 100% !important;
+                width: 100vw !important;
             }
 
-            .mobile_hide {
-                display: none;
+            .m-shell {
+                width: 100% !important;
+                min-width: 100% !important;
             }
 
-            .stack .column {
-                width: 100%;
-                display: block;
+            .center {
+                margin: 0 auto !important;
             }
 
-            .mobile_hide {
-                min-height: 0;
-                max-height: 0;
-                max-width: 0;
-                overflow: hidden;
-                font-size: 0px;
+            .nav {
+                text-align: center !important;
             }
 
-            .desktop_hide,
-            .desktop_hide table {
-                display: table !important;
-                max-height: none !important;
+            .td {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            .bg {
+                height: auto !important;
+                -webkit-background-size: cover !important;
+                background-size: cover !important;
+            }
+
+            .p0-15-30 {
+                padding: 0px 15px 30px 15px !important;
+            }
+
+            .pb0 {
+                padding-bottom: 0px !important;
+            }
+
+            .m-td,
+            .m-hide {
+                display: none !important;
+                width: 0 !important;
+                height: 0 !important;
+                font-size: 0 !important;
+                line-height: 0 !important;
+                min-height: 0 !important;
+            }
+
+            .fluid-img img {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .column {
+                float: left !important;
+                width: 100% !important;
+                display: block !important;
             }
         }
     </style>
 </head>
 
-<body style="background-color: #F5F5F5; margin: 0; padding: 0; -webkit-text-size-adjust: none; text-size-adjust: none;">
-    <table border="0" cellpadding="0" cellspacing="0" class="nl-container" role="presentation"
-        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #F5F5F5;" width="100%">
-        <tbody>
-            <tr>
-                <td>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1"
-                        role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
-                                        class="row-content stack" role="presentation"
-                                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #000000; width: 650px;"
-                                        width="650">
-                                        <tbody>
-                                            <tr>
-                                                <td class="column column-1"
-                                                    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 5px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-                                                    width="100%">
-                                                    <div class="spacer_block block-1"
-                                                        style="height:30px;line-height:30px;font-size:1px;"> </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-2"
-                        role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;" width="100%">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <table align="center" border="0" cellpadding="0" cellspacing="0"
-                                        class="row-content stack" role="presentation"
-                                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #D6E7F0; color: #000000; width: 650px;"
-                                        width="650">
-                                        <tbody>
-                                            <tr>
-                                                <td class="column column-1"
-                                                    style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-weight: 400; text-align: left; padding-bottom: 60px; padding-left: 25px; padding-right: 25px; padding-top: 5px; vertical-align: top; border-top: 0px; border-right: 0px; border-bottom: 0px; border-left: 0px;"
-                                                    width="100%">
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        class="image_block block-1" role="presentation"
-                                                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;"
-                                                        width="100%">
-                                                        <tr>
-                                                            <td class="pad"
-                                                                style="padding-top:45px;width:100%;padding-right:0px;padding-left:0px;">
-                                                                <div align="center" class="alignment"
-                                                                    style="line-height:10px"><img alt="Image"
-                                                                        class="big" src="{{ url('frontend/images/icons/logo-slug-dark.svg') }}"
-                                                                        style="display: block; height: auto; border: 0; width: 540px; max-width: 100%;"
-                                                                        title="Image" width="540" /></div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <table border="0" cellpadding="0" cellspacing="0"
-                                                        class="text_block block-2" role="presentation"
-                                                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
-                                                        width="100%">
-                                                        <tr>
-                                                            <td class="pad"
-                                                                style="padding-left:15px;padding-right:10px;padding-top:20px;">
-                                                                <div style="font-family: sans-serif">
-                                                                    <div class=""
-                                                                        style="font-size: 12px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 18px; color: #052d3d; line-height: 1.5;">
-                                                                        <p
-                                                                            style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 51px;">
-                                                                            <span style="font-size:20px;">
-                                                                                <strong>
-                                                                                    <span style="color:#000000;font-size:20px;">{{ $data['name'] }}</span>
-                                                                                </strong>
-                                                                            </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="pad"
-                                                                style="padding-left:15px;padding-right:10px;padding-top:20px;">
-                                                                <div style="font-family: sans-serif">
-                                                                    <div class=""
-                                                                        style="font-size: 12px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 18px; color: #052d3d; line-height: 1.5;">
-                                                                        <p
-                                                                            style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 51px;">
-                                                                            <span style="font-size:20px;">
-                                                                                <strong>
-                                                                                    <span style="color:#000000;font-size:20px;">{{ $data['phone_number'] }}</span>
-                                                                                </strong>
-                                                                            </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td class="pad"
-                                                                style="padding-left:15px;padding-right:10px;padding-top:20px;">
-                                                                <div style="font-family: sans-serif">
-                                                                    <div class=""
-                                                                        style="font-size: 12px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 18px; color: #052d3d; line-height: 1.5;">
-                                                                        <p
-                                                                            style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 51px;">
-                                                                            <span style="font-size:20px;">
-                                                                                <strong>
-                                                                                    <span style="color:#000000;font-size:20px;">{{ $data['email_address'] }}</span>
-                                                                                </strong>
-                                                                            </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                    <table border="0" cellpadding="10" cellspacing="0"
-                                                        class="text_block block-3" role="presentation"
-                                                        style="mso-table-lspace: 0pt; mso-table-rspace: 0pt; word-break: break-word;"
-                                                        width="100%">
-                                                        <tr>
-                                                            <td class="pad">
-                                                                <div style="font-family: sans-serif">
-                                                                    <div class=""
-                                                                        style="font-size: 12px; font-family: 'Lato', Tahoma, Verdana, Segoe, sans-serif; mso-line-height-alt: 14.399999999999999px; color: #555555; line-height: 1.2;">
-                                                                        <p
-                                                                            style="margin: 0; font-size: 14px; text-align: center; mso-line-height-alt: 16.8px;">
-                                                                            <span
-                                                                                style="font-size:18px;color:#000000;">
-                                                                                {{ $data['message'] }}
-                                                                            </span>
-                                                                        </p>
-                                                                    </div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table><!-- End -->
+<body class="body"
+    style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f4f4f4; -webkit-text-size-adjust:none;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f4f4f4" class="gwfw">
+        <tr>
+            <td align="center" valign="top">
+                <!-- Main -->
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td align="center" style="padding-bottom: 40px;" class="pb0">
+                            <!-- Shell -->
+                            <table width="650" border="0" cellspacing="0" cellpadding="0" class="m-shell">
+                                <tr>
+                                    <td class="td"
+                                        style="width:650px; min-width:650px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                        <!-- Title + Full-Width Image + Text Center + Button -->
+                                        <div mc:repeatable="Select"
+                                            mc:variant="Title + Full-Width Image + Text Center + Button">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                bgcolor="#ffffff">
+                                                <tr>
+                                                    <td style="padding: 0px 40px 10px 40px;" class="p0-15-30">
+                                                        <table width="100%" border="0" cellspacing="0"
+                                                            cellpadding="0">
+
+                                                            <tr>
+                                                                <td class="fluid-img"
+                                                                    style="padding-bottom: 30px; font-size:0pt; line-height:0pt; text-align:left;">
+                                                                    <a href="#" target="_blank"><img
+                                                                            src="https://static.vecteezy.com/system/resources/previews/007/188/453/original/abstract-blur-background-with-pastel-color-free-vector.jpg" width="570"
+                                                                            height="195" border="0"
+                                                                            alt="" /></a></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- END Title + Full-Width Image + Text Center + Button -->
+
+                                        <!-- Article Image On The Left -->
+                                        <div mc:repeatable="Select" mc:variant="Article Image On The Left">
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0"
+                                                bgcolor="#ffffff">
+                                                <tr>
+                                                    <td style="padding: 0px 40px 40px 40px;" class="p0-15-30">
+                                                        <table width="100%" border="0" cellspacing="0"
+                                                            cellpadding="0">
+                                                            <tr>
+                                                                <th class="column"
+                                                                    style="font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+                                                                    <table width="100%" border="0" cellspacing="0"
+                                                                        cellpadding="0">
+                                                                        <tr>
+                                                                            <td class="h2"
+                                                                                style="padding-bottom: 20px; color:#444444; font-family:'Yantramanav', Arial, sans-serif; font-size:22px; line-height: 36px; text-align:left; font-weight:300;">
+                                                                                {{ $data['name'] }} <span
+                                                                                    class="m-hide"><br /></span>{{ $data['email_address'] ?? '' }}
+                                                                                <span class="m-hide"><br /></span>
+                                                                                {{ $data['phone_number'] }}</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text"
+                                                                                style="padding-bottom: 25px; color:#666666; font-family:Arial, sans-serif; font-size:16px; line-height:20px; text-align:left; min-width:auto !important;">
+                                                                                {{ $data['message'] }}</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </th>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- END Article Image On The Left -->
+
+                                    </td>
+                                </tr>
+                            </table>
+                            <!-- END Shell -->
+                        </td>
+                    </tr>
+                </table>
+                <!-- END Main -->
+            </td>
+        </tr>
+    </table>
 </body>
 
 </html>

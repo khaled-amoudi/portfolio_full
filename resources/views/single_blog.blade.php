@@ -14,7 +14,7 @@
         <div class="col-12 col-lg-8 px-0 pe-lg-1">
             <div class="single-blog card mx-0 bg-black-100 text-white">
                 <div class="blog-image w-100 overflow-hidden rounded-1" style="height: 18rem">
-                    <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top w-100 h-100" alt="" />
+                    <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top w-100 h-100" title="{{ $blog->title }}" alt="{{ $blog->title }}" />
                 </div>
                 <div class="card-body px-1 px-sm-3 px-lg-4 px-xl-5 py-4" @if ($blog->lang == 'ar') dir="rtl" @endif>
                     <div class="card-title">
@@ -23,7 +23,7 @@
                                 class="author-badge d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
                                 <div class="d-flex gap-2">
                                     <img src="{{ asset('storage/' . json_decode($blog->author_data)->avatar) }}" class="border-radius-smooth" width="40"
-                                        height="40" alt="" />
+                                        height="40" alt="{{ json_decode($blog->author_data)->name }}" title="{{ json_decode($blog->author_data)->name }}" />
                                     <div class="d-flex flex-column">
                                         <span class="author-name fw-normal text-gray-300 fs-14px">{{ json_decode($blog->author_data)->name }}</span>
                                         <!-- fs-12px -->
@@ -57,11 +57,11 @@
                                 </div>
                             </div>
                         </div>
-                        <h1 class="fw-bolder blog-title-single text-main-gradient">
+                        <h1 class="fw-bolder blog-title-single text-main-gradient pb-3">
                             {{ $blog->title }}
                         </h1>
                         <!-- fs-1.8rem -->
-                        <div class="tags text-white mt-3">
+                        <div class="tags text-white">
                             @foreach ($blog->tags as $tag)
                             <?php
                                 $iteration = $loop->iteration <= 9 ? $loop->iteration : ($loop->iteration % 9);
@@ -99,12 +99,15 @@
                             <span class="me-1 bg-gradient-primary">Join us!</span> Enter your email to stay updated to our
                             latest blog posts.
                         </span>
-                        <div class="input-group mt-3">
-                            <input type="text" class="form-control" placeholder="e.g. name@example.com"
-                                aria-label="e.g. name@example.com" aria-describedby="button-addon2">
-                            <button class="btn bg-gradient-cameleon-dark text-white fs-12px" type="button"
-                                id="button-addon2">Subscribe 🚀</button>
-                        </div>
+                        <form action="{{ route('settler.store') }}" method="POST">
+                            @csrf
+                            <div class="input-group mt-3">
+                                    <input type="email" name="settler_email" class="form-control" placeholder="e.g. name@example.com"
+                                        aria-label="e.g. name@example.com" aria-describedby="button-addon2">
+                                    <button class="btn bg-gradient-cameleon-dark text-white fs-12px" type="submit"
+                                        id="button-addon2">@if (! session()->has('success')) Subscribe 🚀  @else Done ✅ @endif</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

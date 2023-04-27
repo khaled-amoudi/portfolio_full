@@ -8,6 +8,8 @@ use App\Http\Controllers\Dashboard\TagController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Dashboard\ProjectController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SettlerController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +23,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Auth::routes([
+//     'register' => false, // Registration Routes...
+//     'reset' => false, // Password Reset Routes...
+//     'verify' => false, // Email Verification Routes...
+// ]);
+
+
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('/blogs/{slug}', [HomeController::class, 'blog'])->name('blog');
@@ -28,7 +37,13 @@ Route::get('/blogs/{slug}', [HomeController::class, 'blog'])->name('blog');
 Route::post('/contact', [ContactController::class, 'store_and_send_contact_mail'])->middleware('throttle:3,1')->name('postContact');
 Route::delete('/contact/{id}', [ContactController::class, 'delete'])->name('contact.delete');
 
+Route::post('/settler', [SettlerController::class, 'store'])->middleware('throttle:3,1')->name('settler.store');
+Route::delete('/settler/{id}', [SettlerController::class, 'delete'])->name('settler.delete');
 
+Route::get('/download-pdf', function () {
+    $pdfPath = public_path('frontend/images/cv/khaled-amoudi-cv.pdf');
+    return response()->download($pdfPath, 'khaled-amoudi-cv.pdf');
+})->middleware('throttle:4,1')->name('download.pdf');
 
 
 
@@ -39,10 +54,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-
-
-
 
 Route::controller()->name('dashboard.')->prefix('/dashboard')->middleware(['auth'])->group(function () {
     Route::resource('blog', BlogController::class);

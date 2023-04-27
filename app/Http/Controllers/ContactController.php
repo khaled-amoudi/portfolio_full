@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    protected $contact_feature_status = false;
+    protected $contact_feature_status = true;
 
     public function store_and_send_contact_mail(Request $request){
         if($this->contact_feature_status == true){
@@ -36,10 +36,13 @@ class ContactController extends Controller
                 Mail::to('khaled.amoudi00@gmail.com')->send(new ContactFormMail($data));
             }
 
-                    // redirect the user back to the contact page with a success message
-            return redirect('/#contact')->with('success', 'Your message has been sent!');
+            // redirect the user back to the contact page with a success message
+            if(! $contact) {
+                return redirect('/#contact')->with('fail', 'OOPS something went wrong, try another way to contact 🫤');
+            }
+            return redirect('/#contact')->with('success', 'Your message has been sent 🥳');
         } else {
-            return redirect('/');
+            return redirect('/#contact')->with('fail', 'Sorry, this service is temporarily suspended 🫤, try another way to contact, please.');
         }
 
     }

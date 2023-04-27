@@ -4,23 +4,19 @@
             <div class="col-12 col-md-6">
                 <div class="d-flex p-2 pt-4 p-sm-5 h-100 flex-column justify-content-between">
                     <div class="name">
-                        <h2 class="text-capitalize prevent-selection" id="name">
+                        <h2 class="text-capitalize prevent-selection _cstm_wow_fadeInBottom" style="font-size: 100px; font-weight: bold;" id="name">
                             khaled amoudi
-                            <!-- <span class="first-name">khaled</span><br /><span
-                    class="last-name"
-                    >amoudi</span
-                  > -->
                         </h2>
-                        <div class="mt-4">
+                        <div class="mt-4 _cstm_wow_fadeInLeft">
                             <code>
-                                <pre class="fw-bold fs-14px my-0 text-gradient-cameleon">&lt;h3&gt;</pre>
+                                <pre class="fw-bold fs-14px my-0 color-pre-h3">&lt;h3&gt;</pre>
                             </code>
                             <p class="ms-3 ps-2 my-0 letter-spacing-1px">
                                 Software Engineer Specializing <br />
                                 In Web Development
                             </p>
                             <code>
-                                <pre class="fw-bold fs-14px my-0 text-gradient-cameleon">&lt;/h3&gt;</pre>
+                                <pre class="fw-bold fs-14px my-0 color-pre-h3">&lt;/h3&gt;</pre>
                             </code>
 
                             <div class="position-relative d-block d-md-none">
@@ -59,7 +55,7 @@
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block col-lg-6">
-                <div class="main-img position-relative p-5 d-flex justify-content-end">
+                <div class="main-img _cstm_wow_fadeInRight position-relative p-5 d-flex justify-content-end">
                     <!-- <img src="{{ asset('frontend/images/test/face_1.png') }}" class="back-image w-100" alt=""> -->
                     <img class="back-image position-absolute" width="421" height="418"
                         src="{{ asset('frontend/images/cv-card-snow-2.jpg') }}" alt="" />

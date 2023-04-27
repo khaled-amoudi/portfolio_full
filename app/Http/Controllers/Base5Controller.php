@@ -63,7 +63,7 @@ class Base5Controller extends BaseController
         return view($this->route_view_name.'.index', compact('model', 'models', 'additionalData'));
     }
     public function indexQuery() {
-        return $this->getModel()::search(request()->query())->paginate($this->paginate);
+        return $this->getModel()::search(request()->query())->latest()->paginate($this->paginate);
     }
 
 

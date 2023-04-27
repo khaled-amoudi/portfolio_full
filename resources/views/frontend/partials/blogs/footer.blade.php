@@ -1,7 +1,7 @@
 <div class="bg-black-100" style="margin-top: 4rem;">
     <footer class="container py-5">
         <div class="d-flex justify-content-center">
-            <img src="{{ asset('frontend/images/icons/logo-slug-light.svg') }}" width="100px" height="70px"
+            <img src="{{ asset('frontend/images/icons/logo-slug-light.svg') }}" class="lazyload" width="100px" height="70px"
                 alt="">
         </div>
         <ul class="nav justify-content-center mt-4-5 fw-light fs-14px">

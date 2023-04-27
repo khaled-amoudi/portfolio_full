@@ -2,27 +2,26 @@
 
 @section('master')
     <div class="row mb-4">
-        <div class="accordion accordion-flush" id="accordionFlushExample2">
+        <div class="accordion accordion-flush" id="accordionFlushExample3">
             <div class="accordion-item border shadow-sm">
-                <h2 class="accordion-header " id="flush-heading2">
+                <h2 class="accordion-header " id="flush-heading3">
                     <button class="accordion-button bg-light-bronze collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapse2" aria-expanded="false" aria-controls="flush-collapse2">
+                        data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
                         Contact Emails 📩
                     </button>
                 </h2>
-                <div id="flush-collapse2" class="accordion-collapse collapse" aria-labelledby="flush-heading2"
-                    data-bs-parent="#accordionFlushExample2" style="">
+                <div id="flush-collapse3" class="accordion-collapse collapse show" aria-labelledby="flush-heading3"
+                    data-bs-parent="#accordionFlushExample3" style="">
                     <div class="accordion-body px-2">
                         <table class="table mb-0 table-hover">
                             <thead class="bg-light-bronze">
-                                <tr>
+                                <tr class="text-secondary">
                                     <th scope="col">#</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Phone Number</th>
-                                    <th scope="col">IP</th>
+                                    <th scope="col">Phone</th>
                                     <th scope="col">Message</th>
-                                    <th scope="col">Created Time</th>
+                                    <th scope="col">Created</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
@@ -33,7 +32,6 @@
                                         <td>{{ $contact->name }}</td>
                                         <td>{{ $contact->email_address }}</td>
                                         <td>{{ $contact->phone_number }}</td>
-                                        <td>{{ $contact->user_ip }}</td>
                                         <td>{{ $contact->message }}</td>
                                         <td>{{ $contact->created_at->diffForHumans() }}</td>
                                         <td>
@@ -54,6 +52,104 @@
 
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-12 col-md-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample4">
+                <div class="accordion-item border shadow-sm">
+                    <h2 class="accordion-header " id="flush-heading4">
+                        <button class="accordion-button bg-light-bronze collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse4" aria-expanded="false" aria-controls="flush-collapse4">
+                            Settlers Emails ✨
+                        </button>
+                    </h2>
+                    <div id="flush-collapse4" class="accordion-collapse collapse" aria-labelledby="flush-heading4"
+                        data-bs-parent="#accordionFlushExample4" style="">
+                        <div class="accordion-body px-2">
+                            <table class="table mb-0 table-hover">
+                                <thead class="bg-light-bronze">
+                                    <tr class="text-secondary">
+                                        <th scope="col">#</th>
+                                        <th scope="col">Settler Email</th>
+                                        <th scope="col">Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($settlers as $settler)
+                                        <tr>
+                                            <th scope="row">{{ $settler->id }}</th>
+                                            <td>{{ $settler->settler_email }}</td>
+                                            <td>
+
+                                                <form method="POST" action="{{ route('settler.delete', $settler->id) }}">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <a href="{{ route('settler.delete', $settler->id) }}"
+                                                            onclick="event.preventDefault();
+                                                                        this.closest('form').submit();">
+                                                        <i class="bi bi-trash-fill text-danger"></i>
+                                                    </a>
+                                                </form>
+                                            </a>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="4" class="text-center">There Is No Settlers Yet</td>
+                                        </tr>
+                                    @endforelse
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="accordion accordion-flush" id="accordionFlushExample5">
+                <div class="accordion-item border shadow-sm">
+                    <h2 class="accordion-header " id="flush-heading5">
+                        <button class="accordion-button bg-light-bronze collapsed fw-bold text-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapse5" aria-expanded="false" aria-controls="flush-collapse5">
+                            IP's to block 🚫
+                        </button>
+                    </h2>
+                    <div id="flush-collapse5" class="accordion-collapse collapse" aria-labelledby="flush-heading5"
+                        data-bs-parent="#accordionFlushExample5" style="">
+                        <div class="accordion-body px-2">
+                            <table class="table mb-0 table-hover">
+                                <thead class="bg-light-bronze">
+                                    <tr class="text-secondary">
+                                        <th scope="col">IP</th>
+                                        <th scope="col">NO.Requests</th>
+                                        <th scope="col">Created</th>
+                                        {{-- <th scope="col">Action<2/th> --}}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @forelse ($unsafe_contact_ips as $ip)
+                                        <tr>
+                                            <td>{{ $ip->user_ip }}</td>
+                                            <td>{{ $ip->total }}</td>
+                                            <td>{{ $ip->last_created_at }}</td>
+                                            {{-- <td>
+                                                <a href="{{ route('blockIP', $ip->user_ip) }}" type="button" class="btn btn-sm btn-danger">block</a>
+                                            </td> --}}
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="4" class="text-center">There Is No Unsafe Ip's</td>
+                                        </tr>
+                                    @endforelse
+
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

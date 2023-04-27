@@ -11,9 +11,9 @@
                     <h4 class="text-uppercase text-gradient-cameleon">Portfolio</h4>
                     <div class="d-flex justify-content-center">
                         <p class="text-gray-300 letter-spacing-1px w-50">
-                            Lets make your project be the next one to add to this list by
+                            Let's make your project be the next one to add to these lists by
                             <span
-                                class="contact-span position-relative text-white cursor-pointer routeContactPage">contact
+                                class="contact-span position-relative text-white cursor-pointer routeContactPage">contacting
                                 me</span>
                         </p>
                     </div>
@@ -135,7 +135,7 @@
                                                     tabindex="-1"
                                                     aria-labelledby="mockupsModal{{ $project->backendProject->id }}Label"
                                                     aria-hidden="true">
-                                                    <div class="modal-dialog modal-dialog-scrollable modal-xl bg-black-100">
+                                                    <div class="modal-dialog rounded modal-dialog-scrollable modal-xl bg-black-100">
                                                         <div class="modal-content bg-black-100 text-white">
                                                             <div
                                                                 class="modal-header py-2 letter-spacing-1px text-gray-300">
@@ -186,135 +186,6 @@
         </div>
     </section>
 
-    <div class="container-xxl">
-        <section class="social-section position-relative">
-            <div class="bg-blob position-absolute" style="right: 45%; top: 45%">
-                <img src="{{ asset('frontend/images/blobs/blob1.svg') }}" width="200px" height="200px"
-                    class="blob-graph" alt="" />
-            </div>
-            <h3 class="mb-3 mb-md-4 w-100 w-sm-50 text-gray-300 text-md-center">
-                <span class="text-gradient-main">Let's Talk</span> About Your
-                Project 😉
-            </h3>
-            <div class="row">
-                <div class="mt-3 col-6 col-sm-3 col-md-2 offset-md-2">
-                    <a href="https://www.upwork.com/freelancers/~019f0db70103a732c8" target="_blank"
-                        class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-              background-image: url({{ asset('frontend/images/icons/upwork-social-card.webp') }});
-              height: 60px;
-            ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Upwork</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-3 col-6 col-sm-3 col-md-2">
-                    <a href="https://www.freelancer.com/u/khaledAmoudi" target="_blank" class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-              background-image: url({{ asset('frontend/images/icons/freelancer-social-card.webp') }});
-              height: 60px;
-            ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Freelancer</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-3 col-6 col-sm-3 col-md-2">
-                    <a href="https://mostaql.com/u/Khaled_Amoudi" target="_blank" class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-              background-image: url({{ asset('frontend/images/icons/mostaqel-social-card.png') }});
-              height: 60px;
-            ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Mostaqel</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-3 col-6 col-sm-3 col-md-2">
-                    <a href="https://www.linkedin.com/in/khaledamoudi/" target="_blank" class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-                    background-image: url({{ asset('frontend/images/icons/linkedin-social-card.png') }});
-                    height: 60px;
-                  ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Linkedin</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="mt-3 col-6 col-sm-3 col-md-2 offset-md-3">
-                    <a href="https://twitter.com/Khaledamoudii" target="_blank" class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-                    background-image: url({{ asset('frontend/images/icons/twitter-social-card.jpg') }});
-                    height: 60px;
-                  ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Twitter</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-3 col-6 col-sm-3 col-md-2">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=khaled.amoudi00@gmail.com&subject=Subject%20Here&body=Hi%20Khaled,"
-                        target="_blank" class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-                    background-image: url({{ asset('frontend/images/icons/gmail-social-card.png') }});
-                    height: 60px;
-                  ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Gmail</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="mt-3 col-6 col-sm-3 col-md-2">
-                    <a href="https://wa.me/972597173494?text=Hi Khaled, " target="_blank"
-                        class="text-decoration-none">
-                        <div class="card account-card bg-black-100 border-0 w-100">
-                            <div class="img w-100 position-relative"
-                                style="
-                    background-image: url({{ asset('frontend/images/icons/whatsapp-social-card.jpg') }});
-                    height: 60px;
-                  ">
-                                <div class="overlay"></div>
-                            </div>
-                            <div class="card-body text-center py-1 py-sm-2 px-0">
-                                <span class="fs-12px fw-light text-white">Whatsapp</span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-    </div>
+    @include('frontend.partials.socials')
+
 </div>

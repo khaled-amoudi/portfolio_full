@@ -93,12 +93,16 @@
                             <span class="me-1 bg-gradient-primary">Join us!</span> Enter your email to stay updated to our
                             latest blog posts.
                         </span>
-                        <div class="input-group mt-3">
-                            <input type="text" class="form-control" placeholder="e.g. name@example.com"
-                                aria-label="e.g. name@example.com" aria-describedby="button-addon2">
-                            <button class="btn bg-gradient-cameleon-dark text-white fs-12px" type="button"
-                                id="button-addon2">Subscribe 🚀</button>
-                        </div>
+                        <form action="{{ route('settler.store') }}" method="POST">
+                            @csrf
+                            <div class="input-group mt-3">
+                                    <input type="email" name="settler_email" class="form-control" placeholder="e.g. name@example.com"
+                                        aria-label="e.g. name@example.com" aria-describedby="button-addon2">
+                                    <button class="btn bg-gradient-cameleon-dark text-white fs-12px" type="submit"
+                                        id="button-addon2">@if (! session()->has('success')) Subscribe 🚀  @else Done ✅ @endif</button>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>

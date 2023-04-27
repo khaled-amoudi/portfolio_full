@@ -34,6 +34,21 @@
 
         :select_fixed_filters="[
             [
+                'name' => 'project_type',
+                'label' => 'Project Type',
+                'cols' => '3',
+                'options' => [
+                    [
+                        'option_value' => 'frontend',
+                        'option_label' => 'Front-End',
+                    ],
+                    [
+                        'option_value' => 'backend',
+                        'option_label' => 'Back-End',
+                    ],
+                ]
+            ],
+            [
                 'name' => 'is_active',
                 'label' => 'Activity filter',
                 'cols' => '3',

@@ -2,11 +2,11 @@
     <div class="px-sm-3">
         <div class="mt-md-4 d-none d-md-block position-relative">
             <div class="bg-blob position-absolute" style="left: 25%; top: 25%">
-                <img src="{{ asset('frontend/images/blobs/blob1.svg') }}" width="200px" height="200px"
-                    class="blob-graph" alt="" />
+                <img src="{{ asset('frontend/images/blobs/blob1.svg') }}" width="200px" height="200px" class="blob-graph"
+                    alt="" />
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 h-md-100 d-flex align-items-center">
+                <div class="_cstm_wow_fadeInLeft col-12 col-md-6 h-md-100 d-flex align-items-center">
                     <h2 class="brief-desc text-gray-300 fw-light lh-sm letter-spacing-1px">
                         <span class="text-gradient-main fw-bolder prevent-selection"><i
                                 class="fa-solid fa-terminal"></i></span>
@@ -17,7 +17,7 @@
                         <span class="type-effect"></span>
                     </h2>
                 </div>
-                <div class="col-12 col-md-6 h-md-100 d-none d-md-block">
+                <div class="_cstm_wow_fadeInRight col-12 col-md-6 h-md-100 d-none d-md-block">
                     <div class="d-flex justify-content-end align-items-center">
                         <img src="{{ asset('frontend/images/random/about-programming.png') }}" width="386px"
                             height="386px" alt="" />
@@ -62,14 +62,15 @@
                   pointer-events: none;
                 ">
                                 <div class="d-flex flex-column justify-content-center align-items-center h-100">
-                                    <button class="btn btn-cv fs-12px py-3 fw-light letter-spacing-2px text-white"
+                                    <a href="{{ route('download.pdf') }}" type="button" class="btn btn-cv fs-12px py-3 fw-light letter-spacing-2px text-white"
                                         style="pointer-events: auto">
                                         <i class="fa-solid fa-download"></i> CV Download
-                                    </button>
+                                    </a>
                                     <button
                                         class="btn btn-outline-cv fs-12px py-3 fw-light letter-spacing-2px text-white mt-3"
+                                        data-bs-toggle="modal" data-bs-target="#readCvModal"
                                         style="pointer-events: auto">
-                                        Read CV
+                                        <span>Read CV</span>
                                     </button>
                                 </div>
                             </div>
@@ -78,7 +79,28 @@
                 </div>
             </div>
         </div>
-
+        <!-- Modal of Preview backend projects -->
+        <div class="modal fade" id="readCvModal" tabindex="-1" aria-labelledby="readCvModalLabel" aria-hidden="true">
+            <div class="modal-dialog rounded modal-dialog-scrollable modal-xl bg-black-100">
+                <div class="modal-content h-100 bg-black-100 text-white">
+                    <div class="modal-header py-2 letter-spacing-1px text-gray-300">
+                        <h5 class="modal-title fw-normal" id="readCvModalLabel">
+                            CV
+                        </h5>
+                        <button type="button" class="btn-close bg-white rounded-circle" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Gallery -->
+                        <div class="row h-100">
+                            <embed src="{{ asset('frontend/images/cv/khaled-amoudi-cv.pdf') }}" type="application/pdf"
+                                width="100%" height="100%" />
+                        </div>
+                        <!-- Gallery -->
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="divider"></div>
 
         <div class="skills">
@@ -98,7 +120,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Figma</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Figma</span>
                                 </div>
                             </div>
                         </div>
@@ -112,7 +134,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">HTML</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">HTML</span>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +148,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">CSS</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">CSS</span>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +162,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Sass</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Sass</span>
                                 </div>
                             </div>
                         </div>
@@ -154,7 +176,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">JavaScript</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">JavaScript</span>
                                 </div>
                             </div>
                         </div>
@@ -168,7 +190,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">JQuery</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">JQuery</span>
                                 </div>
                             </div>
                         </div>
@@ -182,7 +204,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Bootstrap</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Bootstrap</span>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +218,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Tailwindcss</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Tailwindcss</span>
                                 </div>
                             </div>
                         </div>
@@ -210,7 +232,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Vuejs</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Vuejs</span>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +248,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">PHP Laravel</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">PHP Laravel</span>
                                 </div>
                             </div>
                         </div>
@@ -240,7 +262,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">MySQL</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">MySQL</span>
                                 </div>
                             </div>
                         </div>
@@ -254,7 +276,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Vuejs + Laravel</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Vuejs + Laravel</span>
                                 </div>
                             </div>
                         </div>
@@ -268,7 +290,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Ajax</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Ajax</span>
                                 </div>
                             </div>
                         </div>
@@ -282,7 +304,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Postman Api</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Postman Api</span>
                                 </div>
                             </div>
                         </div>
@@ -296,7 +318,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Git</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Git</span>
                                 </div>
                             </div>
                         </div>
@@ -310,7 +332,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Cpanel</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Cpanel</span>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +348,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Clickup</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Clickup</span>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +362,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Trello</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Trello</span>
                                 </div>
                             </div>
                         </div>
@@ -354,7 +376,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Jira</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Jira</span>
                                 </div>
                             </div>
                         </div>
@@ -368,7 +390,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">StarUml</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">StarUml</span>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +405,7 @@
                                 </div>
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
-                                    <span class="text-white fs-12px fw-light letter-spacing-1px">Sourcetree</span>
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Sourcetree</span>
                                 </div>
                             </div>
                         </div>
@@ -505,138 +527,6 @@
             </div>
         </div>
 
-        <div class="container-xxl">
-            <section class="social-section position-relative">
-                <div class="bg-blob position-absolute" style="right: 45%; top: 45%">
-                    <img src="{{ asset('frontend/images/blobs/blob1.svg') }}" width="200px" height="200px"
-                        class="blob-graph" alt="" />
-                </div>
-                <h3 class="mb-3 mb-md-4 w-100 w-sm-50 text-gray-300 text-md-center">
-                    <span class="text-gradient-main">Let's Talk</span> About Your
-                    Project 😉
-                </h3>
-                <div class="row">
-                    <div class="mt-3 col-6 col-sm-3 col-md-2 offset-md-2">
-                        <a href="https://www.upwork.com/freelancers/~019f0db70103a732c8" target="_blank"
-                            class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                  background-image: url({{ asset('frontend/images/icons/upwork-social-card.webp') }});
-                  height: 60px;
-                ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Upwork</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mt-3 col-6 col-sm-3 col-md-2">
-                        <a href="https://www.freelancer.com/u/khaledAmoudi" target="_blank"
-                            class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                  background-image: url({{ asset('frontend/images/icons/freelancer-social-card.webp') }});
-                  height: 60px;
-                ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Freelancer</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mt-3 col-6 col-sm-3 col-md-2">
-                        <a href="https://mostaql.com/u/Khaled_Amoudi" target="_blank" class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                  background-image: url({{ asset('frontend/images/icons/mostaqel-social-card.png') }});
-                  height: 60px;
-                ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Mostaqel</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mt-3 col-6 col-sm-3 col-md-2">
-                        <a href="https://www.linkedin.com/in/khaledamoudi/" target="_blank"
-                            class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                        background-image: url({{ asset('frontend/images/icons/linkedin-social-card.png') }});
-                        height: 60px;
-                      ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Linkedin</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mt-3 col-6 col-sm-3 col-md-2 offset-md-3">
-                        <a href="https://twitter.com/Khaledamoudii" target="_blank" class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                        background-image: url({{ asset('frontend/images/icons/twitter-social-card.jpg') }});
-                        height: 60px;
-                      ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Twitter</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mt-3 col-6 col-sm-3 col-md-2">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=khaled.amoudi00@gmail.com&subject=Subject%20Here&body=Hi%20Khaled,"
-                            target="_blank" class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                        background-image: url({{ asset('frontend/images/icons/gmail-social-card.png') }});
-                        height: 60px;
-                      ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Gmail</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="mt-3 col-6 col-sm-3 col-md-2">
-                        <a href="https://wa.me/972597173494?text=Hi Khaled, " target="_blank"
-                            class="text-decoration-none">
-                            <div class="card account-card bg-black-100 border-0 w-100">
-                                <div class="img w-100 position-relative"
-                                    style="
-                        background-image: url({{ asset('frontend/images/icons/whatsapp-social-card.jpg') }});
-                        height: 60px;
-                      ">
-                                    <div class="overlay"></div>
-                                </div>
-                                <div class="card-body text-center py-1 py-sm-2 px-0">
-                                    <span class="fs-12px fw-light text-white">Whatsapp</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </div>
+        @include('frontend.partials.socials')
     </div>
 </div>

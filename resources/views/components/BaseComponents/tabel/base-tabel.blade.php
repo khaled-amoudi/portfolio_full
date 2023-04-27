@@ -265,7 +265,7 @@
                                         {{-- <div class="mt-4">OOPS, There Is No {{ $tabel_data['table_title'] }} Yet 😴</div> --}}
                                     </div>
                                 @endif
-                            </td>AAAAAA
+                            </td>
                         </tr>
 
                     @endforelse

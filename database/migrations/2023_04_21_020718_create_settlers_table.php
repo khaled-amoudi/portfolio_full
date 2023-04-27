@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('settlers', function (Blueprint $table) {
             $table->id();
             $table->string('settler_email');
+            $table->string('settler_ip')->nullable();
             $table->timestamps();
         });
     }

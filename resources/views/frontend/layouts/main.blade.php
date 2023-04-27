@@ -18,7 +18,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="">
+    <meta property="og:url" content=""> <!-- website url -->
     <meta property="og:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
     <meta property="og:description"
         content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
@@ -27,7 +27,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="">
+    <meta property="twitter:url" content=""> <!-- website url -->
     <meta property="twitter:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
     <meta property="twitter:description"
         content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
@@ -41,11 +41,13 @@
     <link rel="stylesheet" href="{{ asset('frontend/css/all.min.css') }}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Griffy&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-    <link href="https://fonts.cdnfonts.com/css/dubai" rel="stylesheet" />
 
+    <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Light.ttf') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Medium.ttf') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Regular.ttf') }}" />
+    <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Bold.ttf') }}" />
 </head>
 
 <body>
@@ -59,16 +61,11 @@
 
 
 
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
-        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <script src="{{ asset('admin/assets/js/jquery.min.js') }}"></script>
     <script src="{{ asset('frontend/js/scrollreveal.min.js') }}"></script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('frontend/js/base-script.js') }}"></script>
-    <!-- <script src="js/base-script.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="{{ asset('frontend/js/script.min.js') }}"></script>
 </body>
 
 </html>

@@ -19,6 +19,6 @@ class ProjectObserver
 
 
     public function caches_to_forget() {
-        // Cache::forget('home-view');
+        Cache::forget('home-view');
     }
 }

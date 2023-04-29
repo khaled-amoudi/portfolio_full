@@ -20,6 +20,7 @@ class Project extends BaseModel
         'project_image',
         'is_active',
         'order_number',
+        'front_cols',
     ];
 
     protected $images = ['project_image'];

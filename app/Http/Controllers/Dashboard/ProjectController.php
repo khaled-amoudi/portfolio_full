@@ -14,24 +14,32 @@ class ProjectController extends Base5Controller
     public $route_view_name = 'dashboard.project';
 
 
-
     public function setCreateResource($request)
     {
+        $front_cols = [
+            'col_sm' => $request->col_sm ?? 6,
+            'col_lg' => $request->col_lg ?? 4,
+        ];
         return [
             'project_image' => $this->uploadFile(request: $request, filename: 'project_image', path: 'uploads/projects'),
+            'front_cols' => $request->project_type != 'backend' ? json_encode($front_cols) : NULL,
         ];
     }
     public function setUpdateResource($request, $old_image)
     {
+        $front_cols =  [
+            'col_sm' => $request->col_sm ?? 6,
+            'col_lg' => $request->col_lg ?? 4,
+        ];
         return [
             'project_image' => $this->uploadFile(request: $request, old_image: $old_image, filename: 'project_image', path: 'uploads/projects'),
+            'front_cols' => $request->project_type != 'backend' ? json_encode($front_cols) : NULL,
         ];
     }
 
 
     public function afterCreate($request, $model)
     {
-
         // create mockups json after save images
         if ($request->hasfile('mockups')) {
             foreach ($request->file('mockups') as $file) {

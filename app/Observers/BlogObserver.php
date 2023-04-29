@@ -19,7 +19,7 @@ class BlogObserver
 
 
     public function caches_to_forget() {
-        // Cache::forget('blogs-view');
+        Cache::forget('blogs-view');
         // Cache::forget(function ($key, $value) {
         //     return strpos($key, 'single-blog-view-') === 0;
         // });

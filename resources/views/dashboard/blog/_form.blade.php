@@ -56,7 +56,7 @@
             @enderror
         </div>
 
-        <div class="mb-3 col-12 col-sm-6">
+        <div class="mb-3 col-12 col-sm-4">
             <label for="is_active" class="form-label">Is Active</label>
             <select name="is_active" @class(['form-select', 'is-invalid' => $errors->has('is_active')]) id="is_active" aria-label="Default select example">
                 <option value="1" @selected(old('is_active', $model['is_active']) == 1)>Active</option>
@@ -68,7 +68,7 @@
         </div>
 
 
-        <div class="mb-3 col-12 col-sm-6">
+        <div class="mb-3 col-12 col-sm-4">
             <label for="lang" class="form-label">Blog Language</label>
             <select name="lang" @class(['form-select', 'is-invalid' => $errors->has('lang')]) id="lang" aria-label="Default select example">
                 <option value="ar" @selected(old('lang', $model['lang']) == 'ar')>عربي</option>
@@ -79,6 +79,17 @@
                 <small class="text-danger">{{ $message }}</small>
             @enderror
         </div>
+
+
+        <div class="mb-4 col-12 col-sm-4">
+            <label class="form-label" for="read_time">Reading time needed</label>
+            <input type="number" name="read_time" value="{{ old('read_time', $model['read_time']) }}" id="read_time"
+                class="rounded form-control {{ $errors->has('read_time') ? 'is-invalid' : '' }}" placeholder="Reading time needed" />
+            @error('read_time')
+                <small class="text-danger">{{ $message }}</small>
+            @enderror
+        </div>
+
 
 
         <div class="mb-4 col-12 col-sm-12">

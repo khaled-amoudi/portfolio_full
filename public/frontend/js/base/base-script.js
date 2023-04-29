@@ -11,18 +11,21 @@ ScrollReveal().reveal(
 ///////////////////////////////////////////////////////////////////
 // Start ////////////////////// preloader [page occur in the first]
 ///////////////////////////////////////////////////////////////////
-window.onload = function () {
-    window.setTimeout(fadeout, 1800);
-};
+// window.onload = function () {
+//     window.setTimeout(fadeout, 5500);
+// };
 
-function fadeout() {
-    const preloader = document.querySelector(".preloader");
-    preloader.style.opacity = "0";
-    setTimeout(function() {
-        preloader.style.display = "none";
-    }, 500);
-
-}
+// function fadeout() {
+//     const preloader = document.querySelector(".preloader");
+//     preloader.style.opacity = "0";
+//     preloader.addEventListener(
+//         "transitionend",
+//         function () {
+//             preloader.style.display = "none";
+//         },
+//         { once: true }
+//     );
+// }
 
 ///////////////////////////////////////////////////////////////////
 // End //////////////////////// preloader [page occur in the first]
@@ -89,7 +92,7 @@ $(document).ready(function () {
             $("._cstm_wow_fadeInBottom").addClass(
                 "_cstm_wow_fadeInBottom_animate"
             );
-        }, 1900);
+        }, 1000);
     });
     // Animation Elements like WOWjs {End} ####################
     ///////////////////////////////////////////////////////////
@@ -188,21 +191,21 @@ $(document).ready(function () {
     function open_notch_by_default() {
         setTimeout(function () {
             open_pages_slide();
-        }, 2200+1000);
+        }, 2200);
 
         // Wait for 3 seconds, then call close_pages_slide()
         setTimeout(function () {
             close_pages_slide();
-        }, 4000+1000);
+        }, 4000);
 
         setTimeout(function () {
             open_pages_slide();
-        }, 7200+1000);
+        }, 7200);
 
         // Wait for 3 seconds, then call close_pages_slide()
         setTimeout(function () {
             close_pages_slide();
-        }, 9000+1000);
+        }, 9000);
     }
 
     $("main .pages .homePage").on("mouseenter focus click", function () {

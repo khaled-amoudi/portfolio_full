@@ -22,6 +22,9 @@ class ProjectResource extends JsonResource
             'project_image' => $this->project_image ? image_url($this->project_image) : '',
             'is_active' => $this->is_active,
             'order_number' => $this->order_number,
+            'front_cols' => json_decode($this->front_cols),
+            'front_cols_sm' => json_decode($this->front_cols)->col_sm ?? null,
+            'front_cols_lg' => json_decode($this->front_cols)->col_lg ?? null,
 
 
             'backendProject' => $this->backendProject ?? null,

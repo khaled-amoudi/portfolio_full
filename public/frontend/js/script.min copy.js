@@ -15,13 +15,26 @@ window.onload = function () {
     window.setTimeout(fadeout, 1800);
 };
 
+// function fadeout() {
+//     const preloader = document.querySelector(".preloader");
+//     if (document.readyState === "complete") {
+//         preloader.style.opacity = "0";
+//         preloader.addEventListener(
+//             "transitionend",
+//             function () {
+//                 preloader.style.display = "none";
+//             },
+//             { once: true }
+//         );
+//     }
+// }
+
 function fadeout() {
     const preloader = document.querySelector(".preloader");
     preloader.style.opacity = "0";
-    setTimeout(function() {
+    setTimeout(function () {
         preloader.style.display = "none";
     }, 500);
-
 }
 
 ///////////////////////////////////////////////////////////////////
@@ -188,21 +201,21 @@ $(document).ready(function () {
     function open_notch_by_default() {
         setTimeout(function () {
             open_pages_slide();
-        }, 2200+1000);
+        }, 2200 + 1000);
 
         // Wait for 3 seconds, then call close_pages_slide()
         setTimeout(function () {
             close_pages_slide();
-        }, 4000+1000);
+        }, 4000 + 1000);
 
         setTimeout(function () {
             open_pages_slide();
-        }, 7200+1000);
+        }, 7200 + 1000);
 
         // Wait for 3 seconds, then call close_pages_slide()
         setTimeout(function () {
             close_pages_slide();
-        }, 9000+1000);
+        }, 9000 + 1000);
     }
 
     $("main .pages .homePage").on("mouseenter focus click", function () {
@@ -240,28 +253,40 @@ $(document).ready(function () {
     ///////////////////////////////////////////////////////////////////
     // هذا الشرط حطيناه عأساس انه لو بدنا نخلي الباك اند هو ال default
     // فبنروح نعطيه الكلاس هاد bg-gradient-cameleon
-    if (
-        $("#back").hasClass("bg-gradient-cameleon") ||
-        $("#back2").hasClass("bg-gradient-cameleon")
-    ) {
+    if ($("#back").hasClass("bg-gradient-cameleon")) {
         $("#back-end-projects").fadeIn();
         $("#front-end-projects").fadeOut();
+        $("#uxui-projects").fadeOut();
+    } else if ($("#uxui").hasClass("bg-gradient-cameleon")) {
+        $("#uxui-projects").fadeIn();
+        $("#front-end-projects").fadeOut();
+        $("#back-end-projects").fadeOut();
     } else {
         $("#front-end-projects").fadeIn();
         $("#back-end-projects").fadeOut();
+        $("#uxui-projects").fadeOut();
     }
 
-    $("#front, #front2").on("click", function () {
-        $("#back, #back2").removeClass("bg-gradient-cameleon");
+    $("#uxui").on("click", function () {
+        $("#front, #back").removeClass("bg-gradient-cameleon");
         $(this).addClass("bg-gradient-cameleon");
-        $("#back-end-projects, #back-end-projects2").fadeOut();
-        $("#front-end-projects, #front-end-projects2").fadeIn(1500);
+        $("#back-end-projects").fadeOut();
+        $("#front-end-projects").fadeOut();
+        $("#uxui-projects").fadeIn(1500);
     });
-    $("#back, #back2").on("click", function () {
-        $("#front, #front2").removeClass("bg-gradient-cameleon");
+    $("#front").on("click", function () {
+        $("#uxui, #back").removeClass("bg-gradient-cameleon");
         $(this).addClass("bg-gradient-cameleon");
-        $("#front-end-projects, #front-end-projects2").fadeOut();
-        $("#back-end-projects, #back-end-projects2").fadeIn(1500);
+        $("#back-end-projects").fadeOut();
+        $("#uxui-projects").fadeOut();
+        $("#front-end-projects").fadeIn(1500);
+    });
+    $("#back").on("click", function () {
+        $("#uxui, #front").removeClass("bg-gradient-cameleon");
+        $(this).addClass("bg-gradient-cameleon");
+        $("#front-end-projects").fadeOut();
+        $("#uxui-projects").fadeOut();
+        $("#back-end-projects").fadeIn(1500);
     });
     ///////////////////////////////////////////////////////////////////
     // End ////////////////////////// Portfolio Switcher [front - back]

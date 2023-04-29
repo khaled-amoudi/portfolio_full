@@ -70,6 +70,9 @@
                                     id="floatingInput" required />
                                 <label for="floatingInput"><i class="me-2 fa-solid fa-user"></i> Full name *</label>
                             </div>
+                            @error('name')
+                                <small class="text-dangerr fs-12px">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-1 mb-md-3">
@@ -78,6 +81,9 @@
                                 <label for="floatingInput"><i class="me-2 fa-solid fa-envelope"></i> Email address
                                     *</label>
                             </div>
+                            @error('email_address')
+                                <small class="text-dangerr fs-12px">{{ $message }}</small>
+                            @enderror
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating mb-1 mb-md-3">
@@ -86,6 +92,9 @@
                                 <label for="floatingInput"><i class="me-2 fa-solid fa-phone"></i> Phone number
                                     (optional)</label>
                             </div>
+                            @error('phone_number')
+                            <small class="text-dangerr fs-12px">{{ $message }}</small>
+                        @enderror
                         </div>
                         <div class="col-12">
                             <div class="form-floating mb-1 mb-md-3">
@@ -94,6 +103,9 @@
                                 <label for="floatingTextarea"><i class="me-2 fa-solid fa-message"></i> Message
                                     (optional)</label>
                             </div>
+                            @error('message')
+                            <small class="text-dangerr fs-12px">{{ $message }}</small>
+                        @enderror
                         </div>
 
                         <div class="col-12 d-flex justify-content-center mt-4 mt-md-0">

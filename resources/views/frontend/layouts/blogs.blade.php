@@ -16,6 +16,24 @@
     <meta name="copyright" content="&copy; 2023 KHALED">
 
 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=""> <!-- website url -->
+    <meta property="og:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
+    <meta property="og:description"
+        content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
+    <meta property="og:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content=""> <!-- website url -->
+    <meta property="twitter:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
+    <meta property="twitter:description"
+        content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
+    <meta property="twitter:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+
 
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
 
@@ -34,6 +52,39 @@
     <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Regular.ttf') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Bold.ttf') }}" />
 
+    <style>
+        button[disabled] {
+            pointer-events: none !important;
+            cursor: not-allowed !important;
+        }
+
+        .pagination li.page-item,
+        .pagination li.page-item {
+            margin: auto auto auto 4px;
+        }
+
+        .page-item .page-link {
+            color: #ffffffd3 !important;
+            background-color: #1b1b1b;
+            border-color: #1b1b1b;
+            border-radius: 7px !important;
+            font-weight: 400 !important;
+            font-size: 12px;
+        }
+
+        .page-item.active .page-link {
+            background-color: #9d446480 !important;
+            border-color: #9d446480 !important;
+            color: #fff !important;
+        }
+
+        .page-item.disabled .page-link {
+            color: #ffffff30 !important;
+            background-color: #171717;
+            border-color: #171717;
+            font-weight: 200 !important;
+        }
+    </style>
 </head>
 
 <body class="container-xxl px-0">
@@ -71,6 +122,15 @@
     <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=63cf280fd7982a0019bfb454&product=inline-reaction-buttons&source=platform"
         async="async"></script>
+    <script>
+        $(document).ready(function() {
+            $('.authors-club input[type="email"]').on('input', function() {
+                var email = $(this).val();
+                var isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                $('.authors-club button[type="submit"]').prop('disabled', !isEmailValid);
+            });
+        });
+    </script>
 </body>
 
 </html>

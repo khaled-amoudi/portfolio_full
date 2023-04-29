@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->enum('project_type', ['frontend', 'backend']);
+            $table->string('project_type');
             $table->string('project_name');
             $table->string('project_link')->nullable();
             $table->text('project_image')->nullable();

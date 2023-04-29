@@ -14,7 +14,7 @@ class ContactController extends Controller
     public function store_and_send_contact_mail(Request $request){
         if($this->contact_feature_status == true){
             $request->validate([
-                'name' => 'required',
+                'name' => 'required|string',
                 'email_address' => 'required|email',
                 'phone_number' => 'nullable',
                 'message' => 'nullable',

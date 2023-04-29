@@ -104,7 +104,7 @@
                             <div class="input-group mt-3">
                                     <input type="email" name="settler_email" class="form-control" placeholder="e.g. name@example.com"
                                         aria-label="e.g. name@example.com" aria-describedby="button-addon2">
-                                    <button class="btn bg-gradient-cameleon-dark text-white fs-12px" type="submit"
+                                    <button class="btn bg-gradient-cameleon-dark text-white fs-12px" disabled type="submit"
                                         id="button-addon2">@if (! session()->has('success')) Subscribe 🚀  @else Done ✅ @endif</button>
                             </div>
                         </form>

@@ -26,6 +26,9 @@
                             <button id="back" class="btn px-3 py-2 rounded-pill border-0 fs-12px text-white">
                                 Back-end
                             </button>
+                            {{-- <button id="uxui" class="btn px-3 py-2 rounded-pill border-0 fs-12px text-white">
+                                UX/UI
+                            </button> --}}
                         </div>
                     </div>
                 </div>
@@ -43,8 +46,10 @@
                     <div id="front-end-projects">
                         <div class="row">
                             @foreach ($frontend_projects as $project)
-                                <div class="col-12 col-sm-6 col-lg-4 mt-3 mt-sm-0 p-4">
-                                    <a class="text-decoration-none" target="_blank" href="{{ $project->project_link }}">
+                                <div
+                                    class="col-12 col-sm-{{ json_decode($project->front_cols)->col_sm ?? 6 }} col-lg-{{ json_decode($project->front_cols)->col_lg ?? 4 }} mt-3 mt-sm-0 p-4">
+                                    <a class="text-decoration-none" target="_blank"
+                                        href="{{ $project->project_link }}">
                                         <div class="card front-card bg-transparent border-0">
                                             <div class="img-container rounded overflow-hidden">
                                                 <div class="img w-100 rounded position-relative"
@@ -56,7 +61,8 @@
                                                 <p class="project-title text-white fs-14px text-start">
                                                     {{ $project->project_name }}
                                                 </p>
-                                                <a href="{{ $project->project_link }}" class="d-none d-sm-block ms-2"><i
+                                                <a href="{{ $project->project_link }}"
+                                                    class="d-none d-sm-block ms-2"><i
                                                         class="project-link fa-solid fa-link text-white"></i></a>
                                             </div>
                                         </div>
@@ -131,11 +137,12 @@
                                                 </button>
 
                                                 <!-- Modal of Preview backend projects -->
-                                                <div class="modal fade" id="mockupsModal{{ $project->backendProject->id }}"
-                                                    tabindex="-1"
+                                                <div class="modal fade"
+                                                    id="mockupsModal{{ $project->backendProject->id }}" tabindex="-1"
                                                     aria-labelledby="mockupsModal{{ $project->backendProject->id }}Label"
                                                     aria-hidden="true">
-                                                    <div class="modal-dialog rounded modal-dialog-scrollable modal-xl bg-black-100">
+                                                    <div
+                                                        class="modal-dialog rounded modal-dialog-scrollable modal-xl bg-black-100">
                                                         <div class="modal-content bg-black-100 text-white">
                                                             <div
                                                                 class="modal-header py-2 letter-spacing-1px text-gray-300">
@@ -181,6 +188,32 @@
                             @endforeach
                         </div>
                     </div>
+                    {{-- <div id="uxui-projects">
+                        <div class="row">
+                            @foreach ($uxui_projects as $project)
+                                <div
+                                    class="col-12 col-sm-{{ json_decode($project->front_cols)->col_sm ?? 6 }} col-lg-{{ json_decode($project->front_cols)->col_lg ?? 4 }} mt-3 mt-sm-0 p-4">
+                                    <a class="text-decoration-none" target="_blank" href="{{ $project->project_link }}">
+                                        <div class="card front-card bg-transparent border-0">
+                                            <div class="img-container rounded overflow-hidden">
+                                                <div class="img w-100 rounded position-relative"
+                                                    style="background-image: url({{ asset('storage/' . $project->project_image) }});">
+                                                    <div class="overlay rounded"></div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex justify-content-between align-items-start mt-2 mt-sm-3">
+                                                <p class="project-title text-white fs-14px text-start">
+                                                    {{ $project->project_name }}
+                                                </p>
+                                                <a href="{{ $project->project_link }}" class="d-none d-sm-block ms-2"><i
+                                                        class="project-link fa-solid fa-link text-white"></i></a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

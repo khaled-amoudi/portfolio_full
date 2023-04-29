@@ -48,6 +48,16 @@
     <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Medium.ttf') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Regular.ttf') }}" />
     <link rel="stylesheet" href="{{ asset('frontend/fonts/dubai-cufonfonts/Dubai-Bold.ttf') }}" />
+
+    <style>
+        .text-dangerr {
+            color: #932e4b !important;
+        }
+        button[disabled] {
+            pointer-events: none;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 
 <body>

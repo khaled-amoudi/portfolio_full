@@ -25,6 +25,7 @@
                         aria-label="Default select example">
                         <option value="frontend" @selected(old('project_type', $model['project_type']) == 'frontend')>Front-end</option>
                         <option value="backend" @selected(old('project_type', $model['project_type']) == 'backend')>Back-end</option>
+                        <option value="uxui" @selected(old('project_type', $model['project_type']) == 'uxui')>ux-ui</option>
                     </select>
                     @error('project_type')
                         <small class="text-danger">{{ $message }}</small>
@@ -54,13 +55,35 @@
                     @enderror
                 </div>
 
-                <div class="mb-4 col-12 col-sm-12">
+                <div class="mb-4 col-12 col-sm-6">
                     <label class="form-label" for="project_link">Project Link</label>
                     <input type="url" name="project_link" value="{{ old('project_link', $model['project_link']) }}"
                         id="project_link"
                         class="rounded form-control {{ $errors->has('project_link') ? 'is-invalid' : '' }}"
                         placeholder="Project Link" />
                     @error('project_link')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="mb-4 col-12 col-sm-3">
+                    <label class="form-label" for="col_sm">(Front | Ux-UI) col-sm-??</label>
+                    <input type="number" name="col_sm" value="{{ old('col_sm', $model['front_cols_sm']) }}"
+                        id="col_sm"
+                        class="rounded form-control {{ $errors->has('col_sm') ? 'is-invalid' : '' }}"
+                        placeholder="6" />
+                    @error('col_sm')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
+                </div>
+
+                <div class="mb-4 col-12 col-sm-3">
+                    <label class="form-label" for="col_lg">(Front | Ux-UI) col-lg-??</label>
+                    <input type="number" name="col_lg" value="{{ old('col_lg', $model['front_cols_lg']) }}"
+                        id="col_lg"
+                        class="rounded form-control {{ $errors->has('col_lg') ? 'is-invalid' : '' }}"
+                        placeholder="4" />
+                    @error('col_lg')
                         <small class="text-danger">{{ $message }}</small>
                     @enderror
                 </div>

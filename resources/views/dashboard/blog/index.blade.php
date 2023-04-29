@@ -6,7 +6,7 @@
         'table_title' => 'Blogs',
         'table_button_route' => 'dashboard.blog.create',
     ]" :ths="['#', 'image', 'Title', 'Tags', 'Language', 'Read Time', 'Author', 'Is Active', 'Actions']" :model="$model" :models="$models"
-        :fillable_images="['image']" :fillables="['title', 'language', 'read_time', 'author_name']"
+        :fillable_images="['image']" :fillables="['title', 'language', 'read_time_string', 'author_name']"
         :fillable_badges="[
             'is_active' => [1 => ['Active', 'alert-success'], 0 => ['Not Active', 'alert-danger']],
         ]"

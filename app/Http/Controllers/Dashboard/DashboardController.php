@@ -37,7 +37,8 @@ class DashboardController extends Controller
     }
 
     public function forget_all_caches() {
-        Cache::forget('home-view');
+        Cache::forget(['home-view', 'blogs-view']);
+
 
         return to_route('dashboard')->with('success', 'forgot all the cahce files successfully');
     }
@@ -49,31 +50,32 @@ class DashboardController extends Controller
         'escapeColumns' => true
     ];
 
-    public function getDatatableIndex() {
-        return view('datatable');
-    }
-    public function getDatatable(Request $request)
-    {
-        if ($request->ajax()) {
-            $data = Project::latest()->get();
-            $dataTable = Datatables::of($data)
-                ->addColumn('action', function($row){
-                    $data['id'] = $row->id;
-                    return view('datatabel-column-actions', $data)->render();
-                    // $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
-                    // return $actionBtn;
-                })
-                ->rawColumns(['action']) // except the column "action" from escape (buttons, links, ...)
-                ->make(true);
+    // public function getDatatableIndex() {
+    //     return view('datatable');
+    // }
+    // public function getDatatable(Request $request)
+    // {
+    //     if ($request->ajax()) {
+    //         $data = Project::latest()->get();
 
-                if ($dt_col_conf['addIndexColumn'] ?? false) {
-                    $dataTable->addIndexColumn();
-                }
-                if ($dt_col_conf['escapeColumns'] ?? false) {
-                    $dataTable->escapeColumns(['*']);
-                }
+    //         $dataTable = Datatables::of($data)
+    //             ->addColumn('action', function($row){
+    //                 $data['id'] = $row->id;
+    //                 return view('datatabel-column-actions', $data)->render();
+    //                 // $actionBtn = '<a href="javascript:void(0)" class="edit btn btn-success btn-sm">Edit</a> <a href="javascript:void(0)" class="delete btn btn-danger btn-sm">Delete</a>';
+    //                 // return $actionBtn;
+    //             })
+    //             ->rawColumns(['action']) // except the column "action" from escape (buttons, links, ...)
+    //             ->make(true);
 
-            return $dataTable;
-        }
-    }
+    //             if ($dt_col_conf['addIndexColumn'] ?? false) {
+    //                 $dataTable->addIndexColumn();
+    //             }
+    //             if ($dt_col_conf['escapeColumns'] ?? false) {
+    //                 $dataTable->escapeColumns(['*']);
+    //             }
+
+    //         return $dataTable;
+    //     }
+    // }
 }

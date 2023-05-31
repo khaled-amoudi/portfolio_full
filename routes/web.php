@@ -81,7 +81,7 @@ Route::controller()->name('dashboard.')->prefix('/dashboard')->middleware(['auth
     // })->name('php-artisan-optimize-clear');
 });
 
-    Route::get('dashboard/datatable', [DashboardController::class, 'getDatatableIndex']);
-    Route::get('dashboard/datatable/list', [DashboardController::class, 'getDatatable'])->name('dashboard.datatable');
+    // Route::get('dashboard/datatable', [DashboardController::class, 'getDatatableIndex']);
+    // Route::get('dashboard/datatable/list', [DashboardController::class, 'getDatatable'])->name('dashboard.datatable');
 
 require __DIR__.'/auth.php';

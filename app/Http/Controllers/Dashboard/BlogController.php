@@ -32,7 +32,7 @@ class BlogController extends Base5Controller
     public function setCreateResource($request)
     {
         return [
-            'slug' => Str::slug($request->title) . '-' . $this->quickRandomString(),
+            'slug' => Str::slug($request->title),
             'image' => $this->uploadFile(request: $request, path: 'uploads/blogs'),
             'author_data' => json_encode(Author::find($request->author_id)),
             'read_time' => $request->read_time ?? 2,
@@ -42,7 +42,7 @@ class BlogController extends Base5Controller
     public function setUpdateResource($request, $old_image)
     {
         return [
-            'slug' => Str::slug($request->title) . '-' . $this->quickRandomString(),
+            'slug' => Str::slug($request->title),
             'image' => $this->uploadFile(request: $request, old_image: $old_image, path: 'uploads/blogs'),
             'author_data' => json_encode(Author::find($request->author_id)),
             'read_time' => $request->read_time ?? 2,

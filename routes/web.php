@@ -10,7 +10,9 @@ use App\Http\Controllers\Dashboard\ProjectController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SettlerController;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Analytics\AnalyticsFacade as Analytics;
 use Illuminate\Support\Facades\Route;
+use Spatie\Analytics\Period;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,12 +63,25 @@ Route::controller()->name('dashboard.')->prefix('/dashboard')->middleware(['auth
     Route::resource('tag', TagController::class);
     Route::resource('project', ProjectController::class);
 
+
     Route::get('forget-cache-home-view', [DashboardController::class, 'forget_cache_home_view'])->name('forget_cache_home_view');
     Route::get('forget-all-caches', [DashboardController::class, 'forget_all_caches'])->name('forget_all_caches');
 
+
+
+    // Route::get('data-analysis', function(){
+    //     $analyticsData = Analytics::fetchVisitorsAndPageViews(Period::days(7));
+    //     dd($analyticsData);
+    // });
+
+
+    // Route::get('php-artisan-optimize-clear', function(){
+    //     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
+    //     return to_route('dashboard')->with('success', 'optimize:clear runed successfully');
+    // })->name('php-artisan-optimize-clear');
 });
 
-
-
+    Route::get('dashboard/datatable', [DashboardController::class, 'getDatatableIndex']);
+    Route::get('dashboard/datatable/list', [DashboardController::class, 'getDatatable'])->name('dashboard.datatable');
 
 require __DIR__.'/auth.php';

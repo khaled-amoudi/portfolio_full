@@ -1,6 +1,15 @@
 <div class="main-body">
     <main class="container-xxl" style="height: 100vh !important">
-        <div class="row h-100 mx-0">
+        <div class="row h-100 mx-0 position-relative">
+            {{-- <div class="bg-blob position-absolute d-block d-md-none" style="right: 5%; top: 25%">
+                <img src="http://khaled_portfolio.test/frontend/images/blobs/blob1.svg" width="100px" height="100px" class="blob-graph" alt="">
+            </div> --}}
+            <div class="bg-blob position-absolute d-block d-md-none" style="left: 5%; bottom: 20%">
+                <img src="{{ asset('frontend/images/blobs/blob1.svg') }}" width="200px" height="200px" class="blob-graph" alt="">
+            </div>
+            <div class="position-absolute d-block d-md-none" style="width: 65%; right: 0%; bottom: 15%; z-index: -999; opacity: 0.18; transform: rotate(-4deg);">
+                <img src="{{ asset('frontend/images/random/arabi-03.png') }}" alt="">
+            </div>
             <div class="col-12 col-md-6">
                 <div class="d-flex p-2 pt-4 p-sm-5 h-100 flex-column justify-content-between">
                     <div class="name">
@@ -9,21 +18,21 @@
                         </h2>
                         <div class="mt-4 _cstm_wow_fadeInLeft">
                             <code>
-                                <pre class="fw-bold fs-14px my-0 color-pre-h3">&lt;h3&gt;</pre>
+                                <pre class="fw-bold fs-14px my-0"><span style="color: #5ca4c0 !important;">&lt;</span><span style="color: #d86360 !important;">h3</span><span style="color: #5ca4c0 !important;">&gt;</span></pre>
                             </code>
                             <p class="ms-3 ps-2 my-0 letter-spacing-1px">
                                 Software Engineer Specializing <br />
                                 In Web Development
                             </p>
                             <code>
-                                <pre class="fw-bold fs-14px my-0 color-pre-h3">&lt;/h3&gt;</pre>
+                                <pre class="fw-bold fs-14px my-0"><span style="color: #5ca4c0 !important;">&lt;/</span><span style="color: #d86360 !important;">h3</span><span style="color: #5ca4c0 !important;">&gt;</span></pre>
                             </code>
 
-                            <div class="position-relative d-block d-md-none">
+                            {{-- <div class="position-relative d-block d-md-none">
                                 <img src="{{ asset('frontend/images/random/vscode-screenshot1.png') }}"
                                     style="opacity: .18; transform: skewX(0deg); margin-top: -150px; z-index: -1;"
                                     class="back-image position-absolute w-100" height="300px" alt="">
-                            </div>
+                            </div> --}}
 
                         </div>
                     </div>
@@ -56,11 +65,16 @@
             </div>
             <div class="col-12 d-none d-lg-block col-lg-6">
                 <div class="main-img _cstm_wow_fadeInRight position-relative p-5 d-flex justify-content-end">
-                    <!-- <img src="{{ asset('frontend/images/test/face_1.png') }}" class="back-image w-100" alt=""> -->
+                    <!-- <img src="frontend/images/test/face_1.png" class="back-image w-100" alt=""> -->
+
+                    {{-- <div class="spot-light">
+                        <img src="{{ asset('frontend/images/test/persona.png') }}" class="w-100" alt="">
+                    </div> --}}
+
                     <img class="back-image position-absolute" width="421" height="418"
-                        src="{{ asset('frontend/images/cv-card-snow-2.jpg') }}" alt="" />
-                    <img class="front-image position-absolute" width="421" height="418"
                         src="{{ asset('frontend/images/cv-card-snow-1.jpg') }}" alt="" />
+                    <img class="front-image position-absolute" width="421" height="418"
+                        src="{{ asset('frontend/images/cv-card-snow-2.jpg') }}" alt="" />
                 </div>
             </div>
             <div class="col-12 d-block d-md-none col-lg-6 pb-sm-3">

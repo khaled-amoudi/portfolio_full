@@ -48,8 +48,7 @@
                             @foreach ($frontend_projects as $project)
                                 <div
                                     class="col-12 col-sm-{{ json_decode($project->front_cols)->col_sm ?? 6 }} col-lg-{{ json_decode($project->front_cols)->col_lg ?? 4 }} mt-3 mt-sm-0 p-4">
-                                    <a class="text-decoration-none" target="_blank"
-                                        href="{{ $project->project_link }}">
+                                    <a class="text-decoration-none" target="_blank" href="{{ $project->project_link }}">
                                         <div class="card front-card bg-transparent border-0">
                                             <div class="img-container rounded overflow-hidden">
                                                 <div class="img w-100 rounded position-relative"
@@ -61,8 +60,7 @@
                                                 <p class="project-title text-white fs-14px text-start">
                                                     {{ $project->project_name }}
                                                 </p>
-                                                <a href="{{ $project->project_link }}"
-                                                    class="d-none d-sm-block ms-2"><i
+                                                <a href="{{ $project->project_link }}" target="_blank" class="d-none d-sm-block ms-2"><i
                                                         class="project-link fa-solid fa-link text-white"></i></a>
                                             </div>
                                         </div>
@@ -137,8 +135,8 @@
                                                 </button>
 
                                                 <!-- Modal of Preview backend projects -->
-                                                <div class="modal fade"
-                                                    id="mockupsModal{{ $project->backendProject->id }}" tabindex="-1"
+                                                <div class="modal fade" id="mockupsModal{{ $project->backendProject->id }}"
+                                                    tabindex="-1"
                                                     aria-labelledby="mockupsModal{{ $project->backendProject->id }}Label"
                                                     aria-hidden="true">
                                                     <div
@@ -156,13 +154,38 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <!-- Gallery -->
+                                                                @php
+                                                                    $mockups = json_decode($project->backendProject->mockups);
+                                                                    $oddMockups = array_filter(
+                                                                        $mockups,
+                                                                        function ($key) {
+                                                                            return $key % 2 == 0;
+                                                                        },
+                                                                        ARRAY_FILTER_USE_KEY,
+                                                                    );
+                                                                    $evenMockups = array_filter(
+                                                                        $mockups,
+                                                                        function ($key) {
+                                                                            return $key % 2 == 1;
+                                                                        },
+                                                                        ARRAY_FILTER_USE_KEY,
+                                                                    );
+                                                                @endphp
                                                                 <div class="row">
-                                                                    @foreach (json_decode($project->backendProject->mockups) as $mockup)
-                                                                        <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                                                                    <!-- data-masonry='{"percentPosition": true }' -->
+                                                                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                                                                        @foreach ($oddMockups as $mockup)
                                                                             <img src="{{ asset('storage/' . $mockup) }}"
                                                                                 class="w-100 shadow-1-strong rounded mb-4" />
-                                                                        </div>
-                                                                    @endforeach
+                                                                        @endforeach
+                                                                    </div>
+                                                                    <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                                                                        @foreach ($evenMockups as $mockup)
+                                                                            <img src="{{ asset('storage/' . $mockup) }}"
+                                                                                class="w-100 shadow-1-strong rounded mb-4" />
+                                                                        @endforeach
+                                                                    </div>
+
                                                                 </div>
                                                                 <!-- Gallery -->
                                                             </div>

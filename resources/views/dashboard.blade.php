@@ -110,7 +110,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-6">
+        {{-- <div class="col-12 col-md-6">
             <div class="accordion accordion-flush" id="accordionFlushExample5">
                 <div class="accordion-item border shadow-sm">
                     <h2 class="accordion-header " id="flush-heading5">
@@ -128,7 +128,6 @@
                                         <th scope="col">IP</th>
                                         <th scope="col">NO.Requests</th>
                                         <th scope="col">Created</th>
-                                        {{-- <th scope="col">Action<2/th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -137,9 +136,6 @@
                                             <td>{{ $ip->user_ip }}</td>
                                             <td>{{ $ip->total }}</td>
                                             <td>{{ $ip->last_created_at }}</td>
-                                            {{-- <td>
-                                                <a href="{{ route('blockIP', $ip->user_ip) }}" type="button" class="btn btn-sm btn-danger">block</a>
-                                            </td> --}}
                                         </tr>
                                     @empty
                                         <tr>
@@ -153,7 +149,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
     <div class="row mb-4">
         <div class="accordion accordion-flush" id="accordionFlushExample1">
@@ -209,6 +205,9 @@
                     <div class="accordion-body px-2 py-3">
                         <a class="btn btn-sm bg-purple text-white" href="{{ route('dashboard.forget_cache_home_view') }}">forget cache home-view</a>
                         <a class="btn btn-sm bg-purple text-white" href="{{ route('dashboard.forget_all_caches') }}">forget all caches</a>
+                        <br>
+                        {{-- <a class="mt-3 btn btn-sm bg-purple text-white" href="{{ route('dashboard.php-artisan-optimize-clear') }}">optimize:clear</a>
+                        <a class="mt-3 btn btn-sm bg-purple text-white" href="{{ route('dashboard.config-routes-cache') }}">config:cache & route:cahce</a> --}}
                     </div>
                 </div>
             </div>

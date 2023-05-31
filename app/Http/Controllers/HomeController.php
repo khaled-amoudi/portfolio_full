@@ -13,14 +13,14 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $view = Cache::rememberForever('home-view', function () {
+        // $view = Cache::rememberForever('home-view', function () {
             $projects = Project::with('backendProject')->active()->orderBy('order_number', 'asc')->get();
             $data['frontend_projects'] = $projects->where('project_type', 'frontend');
             $data['backend_projects'] = $projects->where('project_type', 'backend');
             $data['uxui_projects'] = $projects->where('project_type', 'uxui');
             return view('home', $data)->render();
-        });
-        return $view;
+        // });
+        // return $view;
     }
 
 

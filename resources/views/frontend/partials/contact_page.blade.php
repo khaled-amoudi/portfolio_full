@@ -67,8 +67,8 @@
                         <div class="col-12">
                             <div class="form-floating mb-1 mb-md-3">
                                 <input type="text" name="name" class="form-control border-0 rounded-1"
-                                    id="floatingInput" required />
-                                <label for="floatingInput"><i class="me-2 fa-solid fa-user"></i> Full name *</label>
+                                    id="name" required />
+                                <label for="name"><i class="me-2 fa-solid fa-user"></i> Full name *</label>
                             </div>
                             @error('name')
                                 <small class="text-dangerr fs-12px">{{ $message }}</small>
@@ -77,8 +77,8 @@
                         <div class="col-md-6">
                             <div class="form-floating mb-1 mb-md-3">
                                 <input type="email" name="email_address" class="form-control border-0 rounded-1"
-                                    id="floatingInput" placeholder="name@example.com" required />
-                                <label for="floatingInput"><i class="me-2 fa-solid fa-envelope"></i> Email address
+                                    id="email" placeholder="name@example.com" required />
+                                <label for="email"><i class="me-2 fa-solid fa-envelope"></i> Email address
                                     *</label>
                             </div>
                             @error('email_address')
@@ -88,8 +88,8 @@
                         <div class="col-md-6">
                             <div class="form-floating mb-1 mb-md-3">
                                 <input type="text" name="phone_number" class="form-control border-0 rounded-1"
-                                    id="floatingInput" />
-                                <label for="floatingInput"><i class="me-2 fa-solid fa-phone"></i> Phone number
+                                    id="phone_number" />
+                                <label for="phone_number"><i class="me-2 fa-solid fa-phone"></i> Phone number
                                     (optional)</label>
                             </div>
                             @error('phone_number')
@@ -99,8 +99,8 @@
                         <div class="col-12">
                             <div class="form-floating mb-1 mb-md-3">
                                 <textarea name="message" class="form-control border-0 rounded-1" style="height: 20vh"
-                                    placeholder="Leave the topic here" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea"><i class="me-2 fa-solid fa-message"></i> Message
+                                    placeholder="Leave the topic here" id="message"></textarea>
+                                <label for="message"><i class="me-2 fa-solid fa-message"></i> Message
                                     (optional)</label>
                             </div>
                             @error('message')

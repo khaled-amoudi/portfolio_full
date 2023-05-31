@@ -122,4 +122,18 @@ class ProjectController extends Base5Controller
             'github_repo_link' => 'nullable|url'
         ]);
     }
+
+
+    public function destroy($id)
+    {
+        $model = $this->getModel()::find($id);
+        if (!$model) {
+            return redirect()->route($this->route_view_name.'.index')->with('fail', $this->printModelText() . ' Doesn`t Exist');
+        }
+        $deleted = $model->delete();
+        $model->backendProject()->delete();
+
+        if ($deleted) // DO NOT check if the image was deleted, it will case an error
+            return redirect()->route($this->route_view_name.'.index')->with('success', $this->printModelText() . ' Deleted Successfully');
+    }
 }

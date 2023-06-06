@@ -11,7 +11,7 @@
                 <img src="{{ asset('frontend/images/random/arabi-03.png') }}" alt="">
             </div>
             <div class="col-12 col-md-6">
-                <div class="d-flex p-2 pt-4 p-sm-5 h-100 flex-column justify-content-between">
+                <div class="d-flex p-2 pt-4 p-sm-5 h-100 flex-column">
                     <div class="name">
                         <h2 class="text-capitalize prevent-selection _cstm_wow_fadeInBottom" style="font-size: 100px; font-weight: bold;" id="name">
                             khaled amoudi
@@ -36,7 +36,7 @@
 
                         </div>
                     </div>
-                    <div class="my-md-5 d-none d-md-block">
+                    <div class="my-md-5 pt-md-3 d-none d-md-block">
                         <div class="pages fixed-top d-flex align-items-center">
                             <div class="homePage rounded-circle p-4 d-flex justify-content-around align-items-center">
                                 <img src="{{ asset('frontend/images/icons/home.gif') }}" width="40"
@@ -65,16 +65,14 @@
             </div>
             <div class="col-12 d-none d-lg-block col-lg-6">
                 <div class="main-img _cstm_wow_fadeInRight position-relative p-5 d-flex justify-content-end">
-                    <!-- <img src="frontend/images/test/face_1.png" class="back-image w-100" alt=""> -->
+                    {{-- <img src="{{ asset('frontend/images/test/me.jpeg') }}" class="back-image w-100" alt=""> --}}
 
                     {{-- <div class="spot-light">
                         <img src="{{ asset('frontend/images/test/persona.png') }}" class="w-100" alt="">
                     </div> --}}
 
-                    <img class="back-image position-absolute" width="421" height="418"
-                        src="{{ asset('frontend/images/cv-card-snow-1.jpg') }}" alt="" />
-                    <img class="front-image position-absolute" width="421" height="418"
-                        src="{{ asset('frontend/images/cv-card-snow-2.jpg') }}" alt="" />
+                    <img class="back-image position-absolute" width="390" height="480"
+                        src="{{ asset('frontend/images/test/me.jpeg') }}" alt="" />
                 </div>
             </div>
             <div class="col-12 d-block d-md-none col-lg-6 pb-sm-3">

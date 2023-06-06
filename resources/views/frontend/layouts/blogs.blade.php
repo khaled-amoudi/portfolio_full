@@ -16,24 +16,6 @@
     <meta name="copyright" content="&copy; 2023 KHALED">
 
 
-    <meta property="og:type" content="website">
-    <meta property="og:url" content=""> <!-- website url -->
-    <meta property="og:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
-    <meta property="og:description"
-        content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
-    <meta property="og:image"
-        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content=""> <!-- website url -->
-    <meta property="twitter:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
-    <meta property="twitter:description"
-        content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
-    <meta property="twitter:image"
-        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
-
-
 
     <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}" />
 
@@ -85,9 +67,27 @@
             font-weight: 200 !important;
         }
     </style>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content=""> <!-- website url -->
+    <meta property="og:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
+    <meta property="og:description"
+        content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
+    <meta property="og:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content=""> <!-- website url -->
+    <meta property="twitter:title" content="𝗞𝗛𝗔𝗟𝗘𝗗 | web development">
+    <meta property="twitter:description"
+        content="At KHALED, we build websites that help your business grow and attract more customers. With a focus on UX and SEO, Contact us today to achieve your business goals.">
+    <meta property="twitter:image"
+        content="https://metatags.io/assets/meta-tags-16a33a6a8531e519cc0936fbba0ad904e52d35f34a46c97a2c9f6f7dd7d336f2.png">
+
 </head>
 
-<body class="container-xxl px-0">
+<body class="px-0">
 
 
     @if (session()->has('fail'))
@@ -118,10 +118,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-63cf2966e597149d"></script>
-    <script type="text/javascript"
+    {{-- <script type="text/javascript"
         src="https://platform-api.sharethis.com/js/sharethis.js#property=63cf280fd7982a0019bfb454&product=inline-reaction-buttons&source=platform"
-        async="async"></script>
+        async="async"></script> --}}
+        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=63cf27ecd7982a0019bfb453&product=inline-reaction-buttons' async='async'></script>
     <script>
         $(document).ready(function() {
             $('.authors-club input[type="email"]').on('input', function() {

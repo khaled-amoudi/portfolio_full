@@ -1,5 +1,5 @@
-<nav class="navbar sticky-top navbar-expand-sm bg-transparent pt-0 pb-0" style="z-index: 9999;">
-    <div class="container-fluid bg-black-100 py-2 py-sm-1">
+<nav class="navbar sticky-top navbar-expand-sm bg-transparent bg-black-100 pt-0 pb-0" style="z-index: 9999;">
+    <div class="container-xxl px-4 px-xxl-0 py-2 py-sm-1">
         <a class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('frontend/images/icons/logo-single-light.svg') }}" style="width: 60px; height: 40px"
                 alt="" />

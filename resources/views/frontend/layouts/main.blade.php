@@ -76,6 +76,7 @@
     <script src="{{ asset('frontend/js/scrollreveal.min.js') }}"></script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/js/script.min.js') }}"></script>
+
     {{-- <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script> --}}
 </body>
 

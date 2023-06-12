@@ -117,5 +117,10 @@
                 </a>
             </div>
         </div>
+        <p class="mt-4 w-100 text-gray-100 text-center fs-14px">
+            <span class="">Or send a message from <span
+                class="contact-span position-relative text-gray-300 cursor-pointer routeContactPage">Contact Form</span></span>
+        </p>
+
     </section>
 </div>

@@ -1,6 +1,6 @@
 <div class="main-body">
     <main class="container-xxl" style="height: 100vh !important">
-        <div class="row h-100 mx-0 position-relative">
+        <div class="overflow-hidden row h-100 mx-0 position-relative">
             {{-- <div class="bg-blob position-absolute d-block d-md-none" style="right: 5%; top: 25%">
                 <img src="http://khaled_portfolio.test/frontend/images/blobs/blob1.svg" width="100px" height="100px" class="blob-graph" alt="">
             </div> --}}
@@ -65,14 +65,22 @@
             </div>
             <div class="col-12 d-none d-lg-block col-lg-6">
                 <div class="main-img _cstm_wow_fadeInRight position-relative p-5 d-flex justify-content-end">
-                    {{-- <img src="{{ asset('frontend/images/test/me.jpeg') }}" class="back-image w-100" alt=""> --}}
+                        <img src="{{ asset('frontend/images/test/persona2.jpeg') }}" style="opacity: 0.5" class="back-image w-100" alt="">
+
+                        <div class="w-100" style="
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;"></div>
+
 
                     {{-- <div class="spot-light">
                         <img src="{{ asset('frontend/images/test/persona.png') }}" class="w-100" alt="">
                     </div> --}}
 
-                    <img class="back-image position-absolute" width="390" height="480"
-                        src="{{ asset('frontend/images/test/me.jpeg') }}" alt="" />
+                    {{-- <img class="back-image position-absolute" width="390" height="480"
+                        src="{{ asset('frontend/images/test/me.jpeg') }}" alt="" /> --}}
                 </div>
             </div>
             <div class="col-12 d-block d-md-none col-lg-6 pb-sm-3">

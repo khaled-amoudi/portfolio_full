@@ -30,7 +30,7 @@ class Blog extends BaseModel
 
     protected $images = ['image'];
 
-    protected $with = ['tags'];
+    protected $with = ['tags', 'author'];
 
     public function tags() {
         return $this->belongsToMany(Tag::class);

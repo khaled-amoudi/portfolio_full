@@ -12,6 +12,12 @@ class BlogObserver
         $this->caches_to_forget();
     }
 
+    public function updated(Blog $blog)
+    {
+        $cacheKey = 'single-blog-view-' . $blog->slug;
+        Cache::forget($cacheKey);
+    }
+
     public function deleted(Blog $blog)
     {
         $this->caches_to_forget();

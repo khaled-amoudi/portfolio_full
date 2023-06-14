@@ -51,25 +51,4 @@ class HomeController extends Controller
         return $view;
     }
 
-
-
-
-    public function forget_cache_home_view()
-    {
-        Cache::forget('home-view');
-
-        return to_route('dashboard')->with('success', 'forgot the cahce file "home-view" successfully');
-    }
-
-    public function forget_all_caches()
-    {
-        Cache::forget('home-view');
-        Cache::forget('blogs-view');
-        // Cache::forget('single-blog-view-*');
-        // Cache::forget(function ($key, $value) {
-        //     return strpos($key, 'single-blog-view-') === 0;
-        // });
-
-        return to_route('dashboard')->with('success', 'forgot all the cahce files successfully');
-    }
 }

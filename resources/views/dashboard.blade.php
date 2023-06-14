@@ -204,6 +204,7 @@
                     data-bs-parent="#accordionFlushExample2" style="">
                     <div class="accordion-body px-2 py-3">
                         <a class="btn btn-sm bg-purple text-white" href="{{ route('dashboard.forget_cache_home_view') }}">forget cache home-view</a>
+                        <a class="btn btn-sm bg-purple text-white" href="{{ route('dashboard.forget_cache_blog_view') }}">forget cache blogs-view and single blogs</a>
                         <a class="btn btn-sm bg-purple text-white" href="{{ route('dashboard.forget_all_caches') }}">forget all caches</a>
                         <br>
                         {{-- <a class="mt-3 btn btn-sm bg-purple text-white" href="{{ route('dashboard.php-artisan-optimize-clear') }}">optimize:clear</a>

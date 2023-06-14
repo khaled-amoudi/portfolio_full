@@ -65,6 +65,7 @@ Route::controller()->name('dashboard.')->prefix('/dashboard')->middleware(['auth
 
 
     Route::get('forget-cache-home-view', [DashboardController::class, 'forget_cache_home_view'])->name('forget_cache_home_view');
+    Route::get('forget-cache-blog-view', [DashboardController::class, 'forget_cache_blog_view'])->name('forget_cache_blog_view');
     Route::get('forget-all-caches', [DashboardController::class, 'forget_all_caches'])->name('forget_all_caches');
 
 

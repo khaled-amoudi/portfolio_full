@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Project;
 use App\Models\Settler;
@@ -35,21 +36,39 @@ class DashboardController extends Controller
 
         return to_route('dashboard')->with('success', 'forgot the cahce file "home-view" successfully');
     }
+    public function forget_cache_blog_view() {
+        Cache::forget('blogs-view');
 
+        $blogs = Blog::get(['slug']);
+        foreach ($blogs as $blog) {
+            $cacheKey = 'single-blog-view-' . $blog->slug;
+            Cache::forget($cacheKey);
+        }
+
+        return to_route('dashboard')->with('success', 'forgot the cahce file "blog and blogs views" successfully');
+    }
     public function forget_all_caches() {
-        Cache::forget(['home-view', 'blogs-view']);
+        Cache::forget('home-view');
+        Cache::forget('blogs-view');
 
+        $blogs = Blog::get(['slug']);
+        foreach ($blogs as $blog) {
+            $cacheKey = 'single-blog-view-' . $blog->slug;
+            Cache::forget($cacheKey);
+        }
 
         return to_route('dashboard')->with('success', 'forgot all the cahce files successfully');
     }
 
 
 
-    public $dt_col_conf = [
-        'addIndexColumn' => true,
-        'escapeColumns' => true
-    ];
 
+
+
+    // public $dt_col_conf = [
+    //     'addIndexColumn' => true,
+    //     'escapeColumns' => true
+    // ];
     // public function getDatatableIndex() {
     //     return view('datatable');
     // }

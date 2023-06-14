@@ -114,14 +114,13 @@
 
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <script src="{{ asset('admin/assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/js/script-blog.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> --}}
 
-    {{-- <script type="text/javascript"
-        src="https://platform-api.sharethis.com/js/sharethis.js#property=63cf280fd7982a0019bfb454&product=inline-reaction-buttons&source=platform"
-        async="async"></script> --}}
-        <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=63cf27ecd7982a0019bfb453&product=inline-reaction-buttons' async='async'></script>
+
+    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=63cf27ecd7982a0019bfb453&product=inline-reaction-buttons' async='async'></script>
     <script>
         $(document).ready(function() {
             $('.authors-club input[type="email"]').on('input', function() {

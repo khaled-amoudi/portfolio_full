@@ -66,6 +66,40 @@
             border-color: #171717;
             font-weight: 200 !important;
         }
+
+        @keyframes blobHue {
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+        @keyframes blobScale2 {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(1.3);
+            }
+        }
+        @keyframes horizontalMove {
+            from {
+                right: 30%;
+            }
+
+            to {
+                right: 80%;
+            }
+        }
+
+        .bg-blob {
+            filter: blur(100px);
+            opacity: 0.3;
+            animation: 30s infinite alternate horizontalMove;
+        }
+
+        .bg-blob img.blob-graph {
+            animation: 8s infinite alternate blobScale2, 13s infinite alternate blobHue;
+        }
     </style>
 
     <meta property="og:type" content="website">
@@ -120,7 +154,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> --}}
 
 
-    <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=63cf27ecd7982a0019bfb453&product=inline-reaction-buttons' async='async'></script>
+    <script type='text/javascript'
+        src='https://platform-api.sharethis.com/js/sharethis.js#property=63cf27ecd7982a0019bfb453&product=inline-reaction-buttons'
+        async='async'></script>
     <script>
         $(document).ready(function() {
             $('.authors-club input[type="email"]').on('input', function() {

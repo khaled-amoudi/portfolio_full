@@ -11,7 +11,7 @@
                 <img src="{{ asset('frontend/images/random/arabi-03.png') }}" alt="">
             </div>
             <div class="col-12 col-md-6">
-                <div class="d-flex p-2 pt-4 p-sm-5 h-100 flex-column">
+                <div class="d-flex p-2 pt-4 p-sm-5 h-100 justify-content-xxl-center flex-column">
                     <div class="name">
                         <h2 class="text-capitalize prevent-selection _cstm_wow_fadeInBottom" style="font-size: 100px; font-weight: bold;" id="name">
                             khaled amoudi

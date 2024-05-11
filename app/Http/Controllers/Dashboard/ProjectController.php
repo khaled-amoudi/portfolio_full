@@ -13,7 +13,6 @@ class ProjectController extends Base5Controller
 
     public $route_view_name = 'dashboard.project';
 
-
     public function setCreateResource($request)
     {
         $front_cols = [

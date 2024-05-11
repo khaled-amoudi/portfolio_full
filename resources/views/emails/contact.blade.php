@@ -155,7 +155,7 @@
                                                                 <td class="fluid-img"
                                                                     style="padding-bottom: 30px; font-size:0pt; line-height:0pt; text-align:left;">
                                                                     <a href="#" target="_blank"><img
-                                                                            src="https://static.vecteezy.com/system/resources/previews/007/188/453/original/abstract-blur-background-with-pastel-color-free-vector.jpg" width="570"
+                                                                            src="https://img.freepik.com/free-photo/monochromatic-still-life-composition-with-red-paper_23-2148869800.jpg" width="570"
                                                                             height="195" border="0"
                                                                             alt="" /></a></td>
                                                             </tr>

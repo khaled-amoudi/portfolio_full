@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\Storage;
 trait uploadFile
 {
     // dont forget to add ( enctype="multipart/form-data" ) to the html form
-    protected function uploadFile($request, $old_image = null, $filename = 'image', $disk = 'public', $path = '/') {
+    protected function uploadFile($request, $old_image = null, $filename = 'image', $disk = 'public', $path = '/')
+    {
         if ($request->hasFile($filename)) {
             if ($old_image) {
                 Storage::disk($disk)->delete($old_image);

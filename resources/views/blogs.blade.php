@@ -4,7 +4,6 @@
 
 @section('main')
 
-
     @include('frontend.partials.blogs.navbar')
 
     <div class="container-xxl">

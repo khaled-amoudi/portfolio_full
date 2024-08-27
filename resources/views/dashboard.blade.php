@@ -168,7 +168,7 @@
                                 <b>Email : </b><span>khaled.amoudi00@gmail.com</span>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
-                                <b>Phone number : </b><span>00972597173494</span>
+                                <b>Phone number : </b><span>201067107081</span>
                             </div>
                             <div class="col-12 col-md-6 mb-3">
                                 <b>Twitter Link : </b><span><a target="_blank" href="https://twitter.com/Khaledamoudii">Khaledamoudii</a></span>

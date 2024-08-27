@@ -49,7 +49,7 @@
                                 </p>
                                 <p class="ms-2">
                                     <i class="fa-solid fa-phone"></i><span
-                                        class="fw-light ms-1 ms-sm-2">+972597173494</span>
+                                        class="fw-light ms-1 ms-sm-2">+201067107081</span>
                                 </p>
                                 <p class="ms-2">
                                     <span class="fw-light">Freelance Status: <span
@@ -233,6 +233,20 @@
                                 <div
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
                                     <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Vuejs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-3 col-md-2 px-1">
+                        <div class="card px-0 py-2 p-sm-2 bg-black-100 mt-2">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start">
+                                    <img src="{{ asset('frontend/images/skills/nuxt.svg') }}" class="rounded"
+                                        width="50px" height="40px" alt="" />
+                                </div>
+                                <div
+                                    class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
+                                    <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Nuxt3</span>
                                 </div>
                             </div>
                         </div>

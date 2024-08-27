@@ -27,7 +27,7 @@ class HomeController extends Controller
     public function blogs()
     {
         $view = Cache::rememberForever('blogs-view', function () {
-            $data['blogs'] = Blog::with('tags')->active()->latest()->paginate(20);
+            $data['blogs'] = Blog::with('author', 'tags')->active()->latest()->paginate(20);
 
             $tags = Tag::withCount('blogs')->get(['name']);
             $data['tags'] = $tags;
@@ -42,7 +42,7 @@ class HomeController extends Controller
     {
         $view = Cache::remember('single-blog-view-' . $slug, Carbon::now()->addMonth(), function () use ($slug) {
 
-            $data['blog'] = Blog::with('tags')->where('slug', $slug)->active()->firstOrFail();
+            $data['blog'] = Blog::with('author', 'tags')->where('slug', $slug)->active()->firstOrFail();
 
             $data['latest_blogs'] = Blog::active()->latest()->take(5)->get(['image', 'title', 'slug', 'lang']);
 

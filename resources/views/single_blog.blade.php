@@ -22,10 +22,10 @@
                                 <div
                                     class="author-badge d-flex flex-column flex-sm-row justify-content-between align-items-sm-center">
                                     <div class="d-flex gap-2">
-                                        <img src="{{ asset('storage/' . json_decode($blog->author_data)->avatar) }}" class="border-radius-smooth" width="40"
-                                            height="40" alt="{{ json_decode($blog->author_data)->name }}" title="{{ json_decode($blog->author_data)->name }}" />
+                                        <img src="{{ asset('storage/' . $blog->author->avatar) }}" class="border-radius-smooth" width="40"
+                                            height="40" alt="{{ $blog->author->name }}" title="{{ $blog->author->name }}" />
                                         <div class="d-flex flex-column">
-                                            <span class="author-name fw-normal text-gray-300 fs-14px">{{ json_decode($blog->author_data)->name }}</span>
+                                            <span class="author-name fw-normal text-gray-300 fs-14px">{{ $blog->author->name }}</span>
                                             <!-- fs-12px -->
                                             <span class="post-time fw-normal text-gray-200 fs-10px">posted {{ $blog->updated_at->diffForHumans() }}
                                                 <span class="mx-2">.</span>{{ $blog->read_time }} min to read</span>
@@ -35,21 +35,20 @@
                                     <div class="author-socials">
                                         <div class="d-flex mt-2 mt-sm-0 align-items-center">
                                             <span class="me-2 text-gray-300 fs-10px">@if ($blog->lang == 'ar') تابعني: @else follow: @endif</span>
-                                            @isset(json_decode(json_decode($blog->author_data)->socials)->linkedin)
-                                                <a target="_blank" href="{{ json_decode(json_decode($blog->author_data)->socials)->linkedin }}" class="text-gray-300 me-2"><i
+                                            @isset(json_decode($blog->author->socials)->linkedin)
+                                                <a target="_blank" href="{{ json_decode($blog->author->socials)->linkedin }}" class="text-gray-300 me-2"><i
                                                     class="fs-5 fa-brands fa-linkedin"></i></a>
                                             @endisset
-
-                                            @isset(json_decode(json_decode($blog->author_data)->socials)->twitter)
-                                                <a target="_blank" href="{{ json_decode(json_decode($blog->author_data)->socials)->twitter }}" class="text-gray-300 me-2"><i
+                                            @isset(json_decode($blog->author->socials)->twitter)
+                                                <a target="_blank" href="{{ json_decode($blog->author->socials)->twitter }}" class="text-gray-300 me-2"><i
                                                     class="fs-5 fa-brands fa-twitter"></i></a>
                                             @endisset
-                                            @isset(json_decode(json_decode($blog->author_data)->socials)->instagram)
-                                                <a target="_blank" href="{{ json_decode(json_decode($blog->author_data)->socials)->instagram }}" class="text-gray-300 me-2"><i
+                                            @isset(json_decode($blog->author->socials)->instagram)
+                                                <a target="_blank" href="{{ json_decode($blog->author->socials)->instagram }}" class="text-gray-300 me-2"><i
                                                     class="fs-5 fa-brands fa-instagram"></i></a>
                                             @endisset
-                                            @isset(json_decode(json_decode($blog->author_data)->socials)->github)
-                                                <a target="_blank" href="{{ json_decode(json_decode($blog->author_data)->socials)->github }}" class="text-gray-300 me-2"><i
+                                            @isset(json_decode($blog->author->socials)->github)
+                                                <a target="_blank" href="{{ json_decode($blog->author->socials)->github }}" class="text-gray-300 me-2"><i
                                                     class="fs-5 fa-brands fa-github"></i></a>
                                             @endisset
 

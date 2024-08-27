@@ -101,7 +101,7 @@
                 </a>
             </div>
             <div class="mt-3 col-6 col-sm-3 col-md-2">
-                <a href="https://wa.me/972597173494" target="_blank" class="text-decoration-none reveal">
+                <a href="https://wa.me/201067107081" target="_blank" class="text-decoration-none reveal">
                     <div class="card account-card bg-black-100 border-0 w-100">
                         <div class="img w-100 position-relative"
                             style="

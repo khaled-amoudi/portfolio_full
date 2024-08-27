@@ -38,24 +38,24 @@
                     </div>
                     <div class="my-md-5 pt-md-3 d-none d-md-block">
                         <div class="pages fixed-top d-flex align-items-center">
-                            <div class="homePage rounded-circle p-4 d-flex justify-content-around align-items-center">
+                            <div class="homePage rounded-circle p-2 d-flex justify-content-around align-items-center">
                                 <img src="{{ asset('frontend/images/icons/home.gif') }}" width="40"
                                     height="40" alt="" />
                             </div>
                             <div
-                                class="routeAboutPage aboutPage rounded-circle p-4 ms-1 d-flex justify-content-around align-items-center">
+                                class="routeAboutPage aboutPage rounded-circle p-2 ms-1 d-flex justify-content-around align-items-center">
                                 About
                             </div>
                             <div
-                                class="routePortfolioPage portfolioPage rounded-circle p-4 ms-1 d-flex justify-content-around align-items-center">
+                                class="routePortfolioPage portfolioPage rounded-circle p-2 ms-1 d-flex justify-content-around align-items-center">
                                 Portfolio
                             </div>
                             <div
-                                class="routeContactPage contactPage rounded-circle p-4 ms-1 d-flex justify-content-around align-items-center">
+                                class="routeContactPage contactPage rounded-circle p-2 ms-1 d-flex justify-content-around align-items-center">
                                 Contact
                             </div>
                             <div
-                                class="blogPage rounded-circle p-4 ms-1 d-flex justify-content-around align-items-center">
+                                class="blogPage rounded-circle p-2 ms-1 d-flex justify-content-around align-items-center">
                                 <a href="{{ route('blogs') }}" target="_blank"
                                     class="text-decoration-none text-black">Blog</a>
                             </div>
@@ -65,7 +65,7 @@
             </div>
             <div class="col-12 d-none d-lg-block col-lg-6">
                 <div class="main-img _cstm_wow_fadeInRight position-relative p-5 d-flex justify-content-end">
-                        <img src="{{ asset('frontend/images/test/persona2.jpeg') }}" style="opacity: 0.5" class="back-image w-100" alt="">
+                        <img src="{{ asset('frontend/images/test/nft.png') }}" style="opacity: 0.5" class="back-image w-100" alt="">
 
                         <div class="w-100" style="
                         position: absolute;

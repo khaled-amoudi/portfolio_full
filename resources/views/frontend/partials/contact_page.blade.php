@@ -128,7 +128,7 @@
                                 <span><a href="https://www.linkedin.com/in/khaledamoudi/" target="_blank"><img
                                             src="{{ asset('frontend/images/icons/linkedin.svg') }}" width="40px"
                                             height="40px" alt="linkedin" /></a></span>
-                                <span><a href="https://wa.me/972597173494" target="_blank"><img
+                                <span><a href="https://wa.me/201067107081" target="_blank"><img
                                             src="{{ asset('frontend/images/icons/watsapp.svg') }}" width="40px"
                                             height="40px" alt="watsapp" /></a></span>
                                 <span><a href="https://mail.google.com/mail/?view=cm&fs=1&to=khaled.amoudi00@gmail.com&subject=Subject%20Here"

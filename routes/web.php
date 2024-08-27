@@ -48,8 +48,6 @@ Route::get('/download-pdf', function () {
 })->middleware('throttle:4,1')->name('download.pdf');
 
 
-
-
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

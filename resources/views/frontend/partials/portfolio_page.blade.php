@@ -11,7 +11,7 @@
                     <h4 class="text-uppercase text-gradient-cameleon">Portfolio</h4>
                     <div class="d-flex justify-content-center">
                         <p class="text-gray-300 letter-spacing-1px w-50">
-                            Let's make your project be the next one to add to these lists by
+                            Let's work on your project be the next one to add to this list by
                             <span
                                 class="contact-span position-relative text-white cursor-pointer routeContactPage">contacting
                                 me</span>

@@ -167,7 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Barryvdh\Debugbar\ServiceProvider::class,
         Spatie\Analytics\AnalyticsServiceProvider::class,
         Yajra\DataTables\DataTablesServiceProvider::class,
         /*

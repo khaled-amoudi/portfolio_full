@@ -31,7 +31,6 @@ use Spatie\Analytics\Period;
 //     'verify' => false, // Email Verification Routes...
 // ]);
 
-
 Route::get('/', [HomeController::class, 'home'])->name('home');
 Route::get('/blogs', [HomeController::class, 'blogs'])->name('blogs');
 Route::get('/blogs/{slug}', [HomeController::class, 'blog'])->name('blog');
@@ -80,6 +79,7 @@ Route::controller()->name('dashboard.')->prefix('/dashboard')->middleware(['auth
     //     \Illuminate\Support\Facades\Artisan::call('optimize:clear');
     //     return to_route('dashboard')->with('success', 'optimize:clear runed successfully');
     // })->name('php-artisan-optimize-clear');
+
 });
 
     // Route::get('dashboard/datatable', [DashboardController::class, 'getDatatableIndex']);

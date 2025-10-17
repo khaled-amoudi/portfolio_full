@@ -19,8 +19,20 @@
                 </div>
                 <div class="_cstm_wow_fadeInRight col-12 col-md-6 h-md-100 d-none d-md-block">
                     <div class="d-flex justify-content-end align-items-center">
-                        <img src="{{ asset('frontend/images/random/about-programming.png') }}" width="386px"
-                            height="386px" alt="" />
+                        <div class="position-relative">
+                            <div class="overlay" style="
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                -webkit-box-shadow: inset 0px 0px 53px 45px rgba(0,0,0,1);
+                                -moz-box-shadow: inset 0px 0px 53px 45px rgba(0,0,0,1);
+                                box-shadow: inset 0px 0px 53px 45px rgba(0,0,0,1);
+                            "></div>
+                            <img src="{{ asset('frontend/images/random/nft-wall.png') }}" width="386px"
+                                height="386px" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>

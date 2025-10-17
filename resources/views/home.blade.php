@@ -1,6 +1,7 @@
 @extends('frontend.layouts.main')
 
 @section('main')
+
     @include('frontend.partials.cursor')
     @include('frontend.partials.preloader')
     @include('frontend.partials.side_bar')

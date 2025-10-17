@@ -7,7 +7,7 @@
             <div class="bg-blob position-absolute d-block d-md-none" style="left: 5%; bottom: 20%">
                 <img src="{{ asset('frontend/images/blobs/blob1.svg') }}" width="200px" height="200px" class="blob-graph" alt="">
             </div>
-            <div class="position-absolute d-block d-md-none" style="width: 65%; right: 0%; bottom: 15%; z-index: -999; opacity: 0.18; transform: rotate(-4deg);">
+            <div class="position-absolute d-block d-md-none" style="width: 65%; right: 30%; bottom: 20%; z-index: -999; opacity: 0.18; transform: rotate(-4deg);">
                 <img src="{{ asset('frontend/images/random/arabi-03.png') }}" alt="">
             </div>
             <div class="col-12 col-md-6">
@@ -64,8 +64,8 @@
                 </div>
             </div>
             <div class="col-12 d-none d-lg-block col-lg-6">
-                <div class="main-img _cstm_wow_fadeInRight position-relative p-5 d-flex justify-content-end">
-                        <img src="{{ asset('frontend/images/test/nft.png') }}" style="opacity: 0.5" class="back-image w-100" alt="">
+                <div class="main-img _cstm_wow_fadeInRight position-relative px-5 d-flex justify-content-end"> <!-- p-5 -> px-5 -->
+                        <img src="{{ asset('frontend/images/test/nft.png') }}" class="back-image w-100" alt=""> <!-- remove opacity 0.5 -->
 
                         <div class="w-100" style="
                         position: absolute;

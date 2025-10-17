@@ -613,10 +613,6 @@ section.portfolio .content .back-card .project-description {
     border-left: 1px solid var(--gray-200);
 }
 
-
-
-
-
 /* Start Preloader */
 .preloader {
     cursor: auto;
@@ -631,53 +627,53 @@ section.portfolio .content .back-card .project-description {
     transition: all 1s ease-in-out;
     opacity: 1;
     transition: opacity 1s ease-in-out;
-  }
-  .preloader-inner {
+}
+.preloader-inner {
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-  }
-  .preloader .preloader-inner .logo-html {
+}
+.preloader .preloader-inner .logo-html {
     width: var(--pl-width);
     height: var(--pl-height);
-  }
-  .preloader .preloader-inner .block {
-    background-color: #E0E0E0;
+}
+.preloader .preloader-inner .block {
+    background-color: #e0e0e0;
     border-radius: var(--pl-block-radius); /* 70/6 */
     position: absolute;
 
     opacity: 0;
-    animation: preloader-fade-in .5s forwards;
-  }
+    animation: preloader-fade-in 0.5s forwards;
+}
 
-  .preloader .preloader-inner .logo-html .block-1,
-  .preloader .preloader-inner .logo-html .block-2,
-  .preloader .preloader-inner .logo-html .block-3,
-  .preloader .preloader-inner .logo-html .block-4 {
+.preloader .preloader-inner .logo-html .block-1,
+.preloader .preloader-inner .logo-html .block-2,
+.preloader .preloader-inner .logo-html .block-3,
+.preloader .preloader-inner .logo-html .block-4 {
     animation-delay: 1s;
-  }
-  .preloader .preloader-inner .logo-html .block-5,
-  .preloader .preloader-inner .logo-html .block-6 {
+}
+.preloader .preloader-inner .logo-html .block-5,
+.preloader .preloader-inner .logo-html .block-6 {
     animation-delay: 1.2s;
-  }
-  .preloader .preloader-inner .logo-html .block-7 {
+}
+.preloader .preloader-inner .logo-html .block-7 {
     animation-delay: 1.4s;
-  }
-  .preloader .preloader-inner .logo-html .block-8 {
+}
+.preloader .preloader-inner .logo-html .block-8 {
     animation-delay: 1.8s;
-  }
-  @keyframes preloader-fade-in {
+}
+@keyframes preloader-fade-in {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  /* @keyframes preloader-logo-html-2 {
+}
+/* @keyframes preloader-logo-html-2 {
     0% {
       opacity: 0;
       transition: opacity ease;
@@ -696,61 +692,59 @@ section.portfolio .content .back-card .project-description {
       transition: opacity ease;
     }
   } */
-  .preloader .preloader-inner .block-1 {
+.preloader .preloader-inner .block-1 {
     right: 0;
     height: var(--pl-block-h);
     width: calc(var(--pl-block-w) - var(--pl-block-h) - (var(--pl-space) / 2));
-  }
-  .preloader .preloader-inner .block-2 {
+}
+.preloader .preloader-inner .block-2 {
     right: 0;
     height: var(--pl-block-w); /* 600/6 */
     width: var(--pl-block-h); /* 170/6 */
-  }
-  .preloader .preloader-inner .block-3 {
+}
+.preloader .preloader-inner .block-3 {
     right: 0;
     bottom: 0;
     height: var(--pl-block-h);
     width: var(--pl-block-w);
-  }
-  .preloader .preloader-inner .block-4 {
+}
+.preloader .preloader-inner .block-4 {
     right: calc(var(--pl-block-w) - var(--pl-block-h));
     height: var(--pl-block-w);
     width: var(--pl-block-h);
-  }
-  .preloader .preloader-inner .block-5 {
+}
+.preloader .preloader-inner .block-5 {
     left: calc(var(--pl-block-w) - var(--pl-block-h));
     height: var(--pl-block-w);
     width: var(--pl-block-h);
-  }
-  .preloader .preloader-inner .block-6 {
+}
+.preloader .preloader-inner .block-6 {
     bottom: 0;
     height: var(--pl-block-h);
     width: var(--pl-block-w);
-  }
-  .preloader .preloader-inner .block-7 {
+}
+.preloader .preloader-inner .block-7 {
     left: calc(var(--pl-space) / 2);
     top: var(--pl-block-h);
     height: var(--pl-block-h);
     width: calc(var(--pl-block-w) - var(--pl-block-h) - (var(--pl-space)));
-  }
-  .preloader .preloader-inner .block-8 {
+}
+.preloader .preloader-inner .block-8 {
     right: calc(var(--pl-block-h) + (var(--pl-space) / 2));
-    top: calc(var(--pl-block-h) + (var(--pl-space) / 2) + 2px) ;
-    height: calc(var(--pl-block-w) - (var(--pl-block-h) + var(--pl-block-h)) - var(--pl-space) - 4px);
-    width: calc(var(--pl-block-w) - (var(--pl-block-h) + var(--pl-block-h)) - var(--pl-space));
+    top: calc(var(--pl-block-h) + (var(--pl-space) / 2) + 2px);
+    height: calc(
+        var(--pl-block-w) - (var(--pl-block-h) + var(--pl-block-h)) -
+            var(--pl-space) - 4px
+    );
+    width: calc(
+        var(--pl-block-w) - (var(--pl-block-h) + var(--pl-block-h)) -
+            var(--pl-space)
+    );
     background: #ff6ca1 !important;
     background: linear-gradient(90deg, #ff6ca1 0%, #ff7e6e 100%) !important;
-  }
+}
 
-  /* End Preloader */
-
-
-
-
-
-
-
-
+/* End Preloader */
 
 form label {
     font-weight: 300 !important;
@@ -1104,10 +1098,12 @@ form textarea:focus {
         max-width: 400px !important;
     }
 }
-@media (min-width: 251px) and (max-width: 576px) {
+@media (min-width: 251px) and (max-width: 449px) {
     .name #name {
-        font-size: 55px;
+        font-size: 55px !important;
     }
+}
+@media (min-width: 251px) and (max-width: 576px) {
     .name pre {
         font-size: 10px;
     }

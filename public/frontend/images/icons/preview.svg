@@ -1,3 +1,6 @@
-<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 2.75H3.75C2.64543 2.75 1.75 3.64543 1.75 4.75V16.25C1.75 17.3546 2.64543 18.25 3.75 18.25H15.25C16.3546 18.25 17.25 17.3546 17.25 16.25V11M18.25 1.75L11 9M18.25 1.75H14.75M18.25 1.75V5.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="px" viewBox="0 0 15 15" version="1.1">
+<g id="surface1">
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:4;" d="M 9 2.75 L 3.75 2.75 C 2.645833 2.75 1.75 3.645833 1.75 4.75 L 1.75 16.25 C 1.75 17.354167 2.645833 18.25 3.75 18.25 L 15.25 18.25 C 16.354167 18.25 17.25 17.354167 17.25 16.25 L 17.25 11 M 18.25 1.75 L 11 9 M 18.25 1.75 L 14.75 1.75 M 18.25 1.75 L 18.25 5.25 " transform="matrix(0.75,0,0,0.75,0,0)"/>
+</g>
 </svg>

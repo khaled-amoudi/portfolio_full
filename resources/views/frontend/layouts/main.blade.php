@@ -57,6 +57,47 @@
             pointer-events: none;
             cursor: not-allowed;
         }
+
+
+        @keyframes rotateOutUpRight {
+            0% {
+                transform-origin: right bottom;
+                transform: rotate3d(0, 0, 1, 0deg);
+                opacity: 1;
+                right: -45px;
+            }
+            100% {
+                transform-origin: right bottom;
+                transform: rotate3d(0, 0, 1, 90deg);
+                opacity: 0;
+                right: -150px;
+            }
+        }
+
+        @keyframes rotateInDownLeft {
+            0% {
+                transform-origin: right bottom;
+                transform: rotate3d(0, 0, 1, 90deg);
+                opacity: 0;
+                right: -150px;
+            }
+            100% {
+                transform-origin: right bottom;
+                transform: rotate3d(0, 0, 1, 0deg);
+                opacity: 1;
+                right: -45px;
+            }
+        }
+
+        .hide-anim {
+        animation: rotateOutUpRight 1s forwards;
+        position: fixed;
+        }
+
+        .show-anim {
+        animation: rotateInDownLeft 3s forwards;
+        position: fixed;
+        }
     </style>
 </head>
 
@@ -68,6 +109,7 @@
     @yield('main')
 
 
+    <img id="animatedImage" src="{{ asset('frontend/images/random/nft-sneak.png') }}" class="position-fixed d-none d-sm-block" style="right: -45px; bottom: 0px;" width="120px" alt="">
 
 
 
@@ -76,7 +118,21 @@
     <script src="{{ asset('frontend/js/scrollreveal.min.js') }}"></script>
     <script src="{{ asset('frontend/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/js/script.min.js') }}"></script>
+    <script>
+        let show = true;
+        const image = document.getElementById('animatedImage');
 
+        setInterval(() => {
+          if (show) {
+            image.classList.remove('show-anim');
+            image.classList.add('hide-anim');
+          } else {
+            image.classList.remove('hide-anim');
+            image.classList.add('show-anim');
+          }
+          show = !show;
+        }, 8000); // Every 10 seconds
+    </script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script> --}}
 </body>
 

@@ -12,11 +12,11 @@
                             @csrf
                             <div class="col-12">
                                 <label class="form-label">Email</label>
-                                <input type="text" value="admin@gmail.com" name="email" class="form-control">
+                                <input type="text" value="" name="email" class="form-control">
                             </div>
                             <div class="col-12">
                                 <label class="form-label">Password</label>
-                                <input type="text" value="123456" name="password" class="form-control">
+                                <input type="text" value="" name="password" class="form-control">
                             </div>
                             <div class="col-6">
                                 <div class="form-check">

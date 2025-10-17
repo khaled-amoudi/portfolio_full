@@ -13,7 +13,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp.khaledamoudi.com
-        username: u353739254.khaled_portfolio
-        password: fhgR8ews2#p
+        server: ftp.khaledamoudi.dev
+        username: u353739254.khaledamoudiFTP
+        password: kH*88888888
         server-dir: /application/

@@ -1,13 +1,16 @@
-<svg width="616" height="600" viewBox="0 0 616 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="170" height="600" rx="70" fill="#585858"/>
-<rect x="600" y="430" width="170" height="600" rx="70" transform="rotate(90 600 430)" fill="#585858"/>
-<rect x="616" y="600" width="170" height="600" rx="70" transform="rotate(-180 616 600)" fill="#585858"/>
-<rect x="215" y="170" width="170" height="401" rx="70" transform="rotate(-90 215 170)" fill="#585858"/>
-<rect x="215" y="385" width="170" height="186" rx="70" transform="rotate(-90 215 385)" fill="url(#paint0_linear_281_455)"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="px" height="px" viewBox="0 0 462 450" version="1.1">
 <defs>
-<linearGradient id="paint0_linear_281_455" x1="300" y1="385" x2="300" y2="571" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FF6CA1"/>
-<stop offset="1" stop-color="#FF7E6E"/>
+<linearGradient id="linear0" gradientUnits="userSpaceOnUse" x1="300" y1="385" x2="300" y2="571" gradientTransform="matrix(0.000000000000000046,-0.75,0.75,0.000000000000000046,-127.5,450)">
+<stop offset="0" style="stop-color:rgb(100%,42.352941%,63.137255%);stop-opacity:1;"/>
+<stop offset="1" style="stop-color:rgb(100%,49.411765%,43.137255%);stop-opacity:1;"/>
 </linearGradient>
 </defs>
+<g id="surface1">
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(34.509804%,34.509804%,34.509804%);fill-opacity:1;" d="M 52.5 0 L 75 0 C 103.996094 0 127.5 23.503906 127.5 52.5 L 127.5 397.5 C 127.5 426.496094 103.996094 450 75 450 L 52.5 450 C 23.503906 450 0 426.496094 0 397.5 L 0 52.5 C 0 23.503906 23.503906 0 52.5 0 Z M 52.5 0 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(34.509804%,34.509804%,34.509804%);fill-opacity:1;" d="M 450 375 L 450 397.5 C 450 426.496094 426.496094 450 397.5 450 L 52.5 450 C 23.503906 450 0 426.496094 0 397.5 L 0 375 C 0 346.003906 23.503906 322.5 52.5 322.5 L 397.5 322.5 C 426.496094 322.5 450 346.003906 450 375 Z M 450 375 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(34.509804%,34.509804%,34.509804%);fill-opacity:1;" d="M 409.5 450 L 387 450 C 358.003906 450 334.5 426.496094 334.5 397.5 L 334.5 52.5 C 334.5 23.503906 358.003906 0 387 0 L 409.5 0 C 438.496094 0 462 23.503906 462 52.5 L 462 397.5 C 462 426.496094 438.496094 450 409.5 450 Z M 409.5 450 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(34.509804%,34.509804%,34.509804%);fill-opacity:1;" d="M 161.25 75 L 161.25 52.5 C 161.25 23.503906 184.753906 0 213.75 0 L 409.5 0 C 438.496094 0 462 23.503906 462 52.5 L 462 75 C 462 103.996094 438.496094 127.5 409.5 127.5 L 213.75 127.5 C 184.753906 127.5 161.25 103.996094 161.25 75 Z M 161.25 75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:url(#linear0);" d="M 161.25 236.25 L 161.25 213.75 C 161.25 184.753906 184.753906 161.25 213.75 161.25 L 248.25 161.25 C 277.246094 161.25 300.75 184.753906 300.75 213.75 L 300.75 236.25 C 300.75 265.246094 277.246094 288.75 248.25 288.75 L 213.75 288.75 C 184.753906 288.75 161.25 265.246094 161.25 236.25 Z M 161.25 236.25 "/>
+</g>
 </svg>

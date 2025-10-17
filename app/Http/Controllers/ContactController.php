@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\ContactFormMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -33,6 +34,7 @@ class ContactController extends Controller
 
 
             if($contact) {
+                Cache::forget('home-view');
                 Mail::to('khaled.amoudi00@gmail.com')->send(new ContactFormMail($data));
             }
 

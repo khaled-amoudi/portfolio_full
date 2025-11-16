@@ -389,6 +389,7 @@
                                     <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Cpanel</span>
                                 </div>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

@@ -63,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-12 d-none d-lg-block col-lg-6">
                 <div class="main-img _cstm_wow_fadeInRight position-relative px-5 d-flex justify-content-end"> <!-- p-5 -> px-5 -->
                         <img src="{{ asset('frontend/images/test/nft.png') }}" class="back-image w-100" alt=""> <!-- remove opacity 0.5 -->

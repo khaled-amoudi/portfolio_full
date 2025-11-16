@@ -388,6 +388,7 @@
                                     class="col-12 col-sm-8 mt-1 mt-sm-0 d-flex justify-content-center justify-content-sm-start align-items-center">
                                     <span class="text-white text-center text-sm-start fs-12px fw-light letter-spacing-1px">Cpanel</span>
                                 </div>
+
                             </div>
                         </div>
                     </div>

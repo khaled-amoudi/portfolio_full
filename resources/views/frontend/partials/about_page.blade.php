@@ -165,7 +165,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-4 col-sm-3 col-md-2 px-1">
+                    {{-- <div class="col-4 col-sm-3 col-md-2 px-1">
                         <div class="card px-0 py-2 p-sm-2 bg-black-100 mt-2">
                             <div class="row">
                                 <div class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-start">
@@ -178,7 +178,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="col-4 col-sm-3 col-md-2 px-1">
                         <div class="card px-0 py-2 p-sm-2 bg-black-100 mt-2">
                             <div class="row">
